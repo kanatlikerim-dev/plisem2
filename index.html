@@ -213,7 +213,7 @@ body.dark .logo-shell{
 }
 
 .price-status{
-    display:inline-flex;
+    display:none;
     align-items:center;
     gap:8px;
     margin-top:14px;
@@ -890,6 +890,24 @@ body.same-product .product-and-color-area{
     transform:scale(1.15);
 }
 
+.phone-icon-link{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    background:#eaf6ee;
+    color:#1f7a3b;
+}
+
+.phone-icon-link svg{
+    width:15px;
+    height:15px;
+    display:block;
+}
+
 .social-item a{
     text-decoration:none;
     color:var(--text);
@@ -1308,11 +1326,19 @@ body.same-product .product-and-color-area{
     border-radius:14px;
     padding:0;
     flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     background:var(--card-bg);
     border:1px solid var(--input-border);
     color:var(--accent);
     font-size:19px;
     box-shadow:var(--soft-shadow);
+    cursor:pointer;
+}
+.copy-code-btn::before{
+    content:"⧉";
+    line-height:1;
 }
 .order-warning{
     background:var(--warning-bg);
@@ -1379,7 +1405,7 @@ body.same-product .product-and-color-area{
 
 
 <style>
-/* SİPARİŞ TAKİP İNCE AYAR - DESTEK VE KODU KAYBETTİM */
+/* SİPARİŞ TAKİP ?NCE AYAR - DESTEK VE KODU KAYBETT?M */
 .tracking-support-actions{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -1420,7 +1446,7 @@ body.same-product .product-and-color-area{
 .order-success-help{
     margin-top:12px;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
     gap:10px;
 }
 .order-success-help .btn-light{
@@ -1437,7 +1463,7 @@ body.same-product .product-and-color-area{
 
 
 <style>
-/* SİPARİŞ SORGULAMA SON İNCE AYAR */
+/* SİPARİŞ SORGULAMA SON ?NCE AYAR */
 .tracking-status-note{
     margin-top:10px;
     color:var(--muted);
@@ -1995,51 +2021,2708 @@ button{
 </style>
 
 <style>
-/* EN SON GÖRSEL DENGE KATMANI */
-body{padding:16px!important;}
-.container{max-width:1060px!important;border-radius:18px!important;padding:24px!important;}
-.header{padding-top:42px!important;margin-bottom:20px!important;}
-.logo-shell{width:152px!important;min-height:88px!important;border-radius:18px!important;padding:12px!important;margin-bottom:12px!important;}
-.header img{width:120px!important;}
-.header h1{font-size:44px!important;margin-bottom:6px!important;}
-.hero-kicker{font-size:13px!important;letter-spacing:.35px!important;}
-.hero-subtitle{max-width:660px!important;font-size:14.5px!important;}
-.hero-badges{margin-top:13px!important;gap:7px!important;}
-.badge,.price-status{padding:7px 10px!important;font-size:12px!important;}
-.card{border-radius:16px!important;padding:16px!important;margin-bottom:14px!important;}
-.control-card h2,.card h2{font-size:24px!important;}
-.selection-box,.global-selection,.system-mode-box,.selection-option,.product-choice,.choice,.cam-card,.result,.summary-card,.order-tracking-card,.social-item,.note{border-radius:14px!important;}
-.grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))!important;}
-.selection-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-.system-mode-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
-.product-grid{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))!important;}
-.fabric-grid,.color-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))!important;}
-.catalog-actions,.result-actions{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))!important;}
-button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!important;}
-.btn-main{margin-top:8px!important;}
-.cam-header{padding:14px 16px!important;}
-.cam-body{padding:0 16px 16px!important;}
-.summary-head h2{font-size:30px!important;}
-.order-item,.customer-box,.price-panel,.tracking-status-card,.price-list-card,.order-success-modal,.modal-content{border-radius:16px!important;}
-.price-row.grand strong{font-size:24px!important;}
-.social{margin-top:18px!important;}
-.social-item{padding:9px 11px!important;}
-.social-item img{width:23px!important;height:23px!important;}
+/* BASIT / PREMIUM MOD GORUNUM KATMANI */
+.view-mode-btn{
+    min-width:112px;
+}
+
+.premium-nav-brand,
+.premium-nav-links,
+.premium-hero-actions,
+.premium-hero-trust,
+.premium-benefits,
+.premium-hero-copy,
+.premium-stats{
+    display:none;
+}
+
+body.premium-mode{
+    --body-bg:#f3eee6;
+    --card-bg:#fffdf9;
+    --panel-bg:#faf6ee;
+    --soft-bg:#eee5d8;
+    --text:#211d18;
+    --muted:#70675d;
+    --border:#e4d8c8;
+    --input-border:#d9cabb;
+    --button-bg:#1f1b16;
+    --button-hover:#332b23;
+    --accent:#a77d4f;
+    --accent-dark:#7d5633;
+    --accent-soft:#efe2cf;
+}
+
+body.dark.premium-mode{
+    --body-bg:#171717;
+    --card-bg:#22201d;
+    --panel-bg:#26231f;
+    --soft-bg:#302a22;
+    --text:#f5efe7;
+    --muted:#c7bbae;
+    --border:#40382f;
+    --input-border:#4a4035;
+    --button-bg:#c8a16f;
+    --button-hover:#d3ad7b;
+    --accent:#c8a16f;
+    --accent-dark:#d6b27d;
+    --accent-soft:#3b3025;
+}
+
+body.premium-mode .container{
+    max-width:1180px;
+    padding:22px;
+    border-radius:30px;
+    background:rgba(255,253,249,0.90);
+}
+
+body.dark.premium-mode .container{
+    background:rgba(28,27,25,0.94);
+}
+
+body.premium-mode .header{
+    min-height:520px;
+    text-align:left;
+    overflow:hidden;
+    padding:34px 34px 190px;
+    border-radius:26px;
+    background:
+        linear-gradient(90deg, rgba(255,253,249,0.98) 0%, rgba(255,253,249,0.82) 44%, rgba(255,253,249,0.30) 72%),
+        url("./cam.png") center right/cover no-repeat;
+    border:1px solid rgba(167,125,79,0.22);
+    box-shadow:0 24px 80px rgba(62,45,29,0.14);
+}
+
+body.dark.premium-mode .header{
+    background:
+        linear-gradient(90deg, rgba(23,23,23,0.96) 0%, rgba(23,23,23,0.78) 48%, rgba(23,23,23,0.42) 100%),
+        url("./cam.png") center right/cover no-repeat;
+}
+
+body.premium-mode .top-actions{
+    top:22px;
+    left:26px;
+    right:26px;
+    z-index:2;
+}
+
+body.premium-mode .top-small-btn{
+    border-radius:999px;
+    background:rgba(255,253,249,0.86);
+    backdrop-filter:blur(12px);
+    box-shadow:0 14px 36px rgba(62,45,29,0.11);
+}
+
+body.dark.premium-mode .top-small-btn{
+    background:rgba(34,32,29,0.84);
+}
+
+body.premium-mode .logo-shell{
+    margin:82px 0 18px;
+    width:122px;
+    min-height:92px;
+    border-radius:22px;
+}
+
+body.premium-mode .header img{
+    width:98px;
+}
+
+body.premium-mode .header h1{
+    max-width:470px;
+    font-size:64px;
+    margin-bottom:14px;
+}
+
+body.premium-mode .hero-kicker{
+    letter-spacing:1.6px;
+}
+
+body.premium-mode .hero-subtitle{
+    max-width:470px;
+    margin:0;
+    font-size:16px;
+    color:var(--muted);
+}
+
+body.premium-mode .hero-badges{
+    justify-content:flex-start;
+    margin-top:22px;
+}
+
+body.premium-mode .badge{
+    background:rgba(255,253,249,0.82);
+    border-color:rgba(167,125,79,0.22);
+    box-shadow:0 10px 24px rgba(62,45,29,0.08);
+}
+
+body.dark.premium-mode .badge{
+    background:rgba(34,32,29,0.82);
+}
+
+body.premium-mode .control-card{
+    position:relative;
+    z-index:3;
+    margin-top:-150px;
+    border-radius:28px;
+    padding:26px;
+    background:rgba(255,253,249,0.94);
+    box-shadow:0 28px 90px rgba(62,45,29,0.16);
+}
+
+body.dark.premium-mode .control-card{
+    background:rgba(34,32,29,0.95);
+}
+
+body.premium-mode .card,
+body.premium-mode .selection-box,
+body.premium-mode .cam-block,
+body.premium-mode .summary-box,
+body.premium-mode .tracking-status-card,
+body.premium-mode .order-success-modal{
+    border-radius:24px;
+    border-color:rgba(167,125,79,0.18);
+    box-shadow:0 16px 42px rgba(62,45,29,0.08);
+}
+
+body.premium-mode input,
+body.premium-mode select,
+body.premium-mode textarea{
+    border-radius:16px;
+    background:rgba(255,253,249,0.92);
+}
+
+body.dark.premium-mode input,
+body.dark.premium-mode select,
+body.dark.premium-mode textarea{
+    background:rgba(32,30,28,0.92);
+}
+
+body.premium-mode .selection-option,
+body.premium-mode .system-mode-option,
+body.premium-mode .product-option,
+body.premium-mode .case-option,
+body.premium-mode .color-option,
+body.premium-mode .fabric-option{
+    border-radius:18px;
+}
+
+body.premium-mode .btn-main{
+    border-radius:16px;
+    letter-spacing:.2px;
+    box-shadow:0 18px 36px rgba(88,62,36,0.22);
+}
+
+body.premium-mode .btn-light{
+    border-radius:16px;
+}
+
+body.premium-mode .summary-head h2{
+    font-size:36px;
+}
+
+body.premium-mode .price-row.grand{
+    border-radius:20px;
+}
+
 @media(max-width:760px){
-    body{padding:10px!important;}
-    .container{padding:14px!important;border-radius:16px!important;}
-    .top-actions{position:static!important;display:grid!important;grid-template-columns:1fr 1fr!important;margin-bottom:14px!important;}
-    .top-small-btn{width:100%!important;font-size:12.5px!important;padding:8px 9px!important;}
-    .header{padding-top:0!important;}
-    .logo-shell{width:132px!important;min-height:78px!important;}
-    .header img{width:106px!important;}
-    .header h1{font-size:38px!important;}
-    .hero-badges{display:grid!important;grid-template-columns:1fr!important;}
-    .selection-grid,.system-mode-grid,.catalog-actions,.result-actions,.tracking-grid{grid-template-columns:1fr!important;}
-    .summary-head,.tracking-head,.price-list-head,.order-success-title{display:block!important;}
-    .summary-pill{display:inline-flex!important;margin-top:8px!important;}
+    body.premium-mode .container{
+        padding:14px;
+        border-radius:22px;
+    }
+
+    body.premium-mode .header{
+        min-height:auto;
+        text-align:center;
+        padding:18px 16px 132px;
+        background:
+            linear-gradient(180deg, rgba(255,253,249,0.96), rgba(255,253,249,0.80)),
+            url("./cam.png") center/cover no-repeat;
+    }
+
+    body.dark.premium-mode .header{
+        background:
+            linear-gradient(180deg, rgba(23,23,23,0.94), rgba(23,23,23,0.82)),
+            url("./cam.png") center/cover no-repeat;
+    }
+
+    body.premium-mode .top-actions{
+        position:static;
+        display:grid;
+        grid-template-columns:1fr;
+        margin-bottom:18px;
+    }
+
+    body.premium-mode .logo-shell{
+        margin:0 auto 14px;
+    }
+
+    body.premium-mode .header h1{
+        font-size:44px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    body.premium-mode .hero-subtitle{
+        margin:0 auto;
+    }
+
+    body.premium-mode .hero-badges{
+        justify-content:center;
+    }
+
+    body.premium-mode .control-card{
+        margin-top:-92px;
+        padding:18px;
+    }
+}
+
+/* PREMIUM MOD TAM SAYFA YERLESIMI */
+body.premium-mode{
+    padding:0;
+    background:#f4eee5;
+    overflow-x:hidden;
+}
+
+body.dark.premium-mode{
+    background:#171513;
+}
+
+body.premium-mode .container{
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:0;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    background:transparent;
+    backdrop-filter:none;
+}
+
+body.dark.premium-mode .container{
+    background:transparent;
+}
+
+body.premium-mode .header{
+    min-height:760px;
+    margin:0;
+    padding:108px clamp(28px, 6vw, 92px) 260px;
+    border:0;
+    border-radius:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    background:
+        linear-gradient(90deg, rgba(246,239,228,0.98) 0%, rgba(246,239,228,0.88) 33%, rgba(246,239,228,0.50) 58%, rgba(246,239,228,0.12) 100%),
+        url("./plisegörsel1.png") center right/cover no-repeat;
+    box-shadow:none;
+}
+
+body.dark.premium-mode .header{
+    background:
+        linear-gradient(90deg, rgba(23,21,19,0.98) 0%, rgba(23,21,19,0.88) 36%, rgba(23,21,19,0.55) 67%, rgba(23,21,19,0.30) 100%),
+        url("./plisegörsel1.png") center right/cover no-repeat;
+}
+
+body.premium-mode .header:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-1px;
+    height:180px;
+    background:linear-gradient(180deg, rgba(244,238,229,0), #f4eee5 74%);
+    pointer-events:none;
+}
+
+body.dark.premium-mode .header:after{
+    background:linear-gradient(180deg, rgba(23,21,19,0), #171513 74%);
+}
+
+body.premium-mode .top-actions{
+    position:absolute;
+    top:24px;
+    left:clamp(18px, 4vw, 64px);
+    right:clamp(18px, 4vw, 64px);
+    min-height:70px;
+    padding:12px 14px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:12px;
+    border:1px solid rgba(130,96,58,0.15);
+    border-radius:999px;
+    background:rgba(255,253,248,0.82);
+    box-shadow:0 22px 70px rgba(83,57,32,0.12);
+    backdrop-filter:blur(20px);
+    z-index:5;
+}
+
+body.dark.premium-mode .top-actions{
+    background:rgba(27,25,22,0.76);
+    border-color:rgba(201,163,111,0.18);
+}
+
+body.premium-mode .premium-nav-brand,
+body.premium-mode .premium-nav-links{
+    display:flex;
+}
+
+body.premium-mode .premium-nav-brand{
+    margin-right:auto;
+    align-items:center;
+    gap:12px;
+    min-width:210px;
+    padding-left:8px;
+}
+
+body.premium-mode .premium-nav-brand img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    border-radius:13px;
+    background:#fff;
+    box-shadow:0 10px 26px rgba(68,48,29,0.10);
+}
+
+body.premium-mode .premium-nav-brand strong{
+    display:block;
+    font-family:"Cormorant Garamond", serif;
+    font-size:24px;
+    line-height:1;
+}
+
+body.premium-mode .premium-nav-brand span{
+    display:block;
+    margin-top:2px;
+    color:var(--muted);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.9px;
+    text-transform:uppercase;
+}
+
+body.premium-mode .premium-nav-links{
+    align-items:center;
+    gap:6px;
+}
+
+body.premium-mode .premium-nav-links a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:12px;
+    font-weight:800;
+    padding:10px 11px;
+    border-radius:999px;
+}
+
+body.premium-mode .premium-nav-links a:hover{
+    background:rgba(167,125,79,0.10);
+    color:var(--accent-dark);
+}
+
+body.premium-mode .top-small-btn{
+    min-width:auto;
+    padding:11px 15px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.88);
+    border-color:rgba(126,91,51,0.16);
+    box-shadow:none;
+}
+
+body.dark.premium-mode .top-small-btn{
+    background:rgba(34,31,27,0.84);
+}
+
+body.premium-mode .logo-shell{
+    display:none;
+}
+
+body.premium-mode .header h1{
+    max-width:600px;
+    margin:0 0 16px;
+    font-size:clamp(58px, 7vw, 118px);
+    line-height:.9;
+    letter-spacing:0;
+}
+
+body.premium-mode .hero-kicker{
+    order:-1;
+    margin:0 0 14px;
+    color:var(--accent-dark);
+    font-size:13px;
+    letter-spacing:1.8px;
+}
+
+body.premium-mode .hero-subtitle{
+    max-width:520px;
+    margin:0;
+    color:#51493f;
+    font-size:18px;
+    line-height:1.7;
+}
+
+body.dark.premium-mode .hero-subtitle{
+    color:#d4cabd;
+}
+
+body.premium-mode .hero-badges{
+    justify-content:flex-start;
+    margin-top:28px;
+    gap:12px;
+}
+
+body.premium-mode .badge{
+    padding:10px 14px;
+    background:rgba(255,253,249,0.78);
+    border-color:rgba(126,91,51,0.17);
+    box-shadow:0 16px 32px rgba(84,57,32,0.10);
+}
+
+body.premium-mode .premium-hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:32px;
+}
+
+body.premium-mode .premium-hero-actions .btn-main,
+body.premium-mode .premium-hero-actions .btn-light{
+    width:auto;
+    min-width:170px;
+    margin:0;
+    padding:15px 20px;
+}
+
+body.premium-mode .premium-hero-trust{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:14px;
+    width:min(720px, 55vw);
+    margin-top:34px;
+}
+
+body.premium-mode .premium-hero-trust div{
+    padding:16px;
+    border-radius:20px;
+    background:rgba(255,253,249,0.72);
+    border:1px solid rgba(126,91,51,0.13);
+    box-shadow:0 16px 36px rgba(84,57,32,0.08);
+}
+
+body.dark.premium-mode .premium-hero-trust div{
+    background:rgba(34,31,27,0.74);
+}
+
+body.premium-mode .premium-hero-trust strong{
+    display:block;
+    font-size:17px;
+    margin-bottom:3px;
+}
+
+body.premium-mode .premium-hero-trust span{
+    display:block;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.45;
+}
+
+body.premium-mode .price-status{
+    margin-top:20px;
+}
+
+body.premium-mode .control-card,
+body.premium-mode #camArea,
+body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+body.premium-mode .result,
+body.premium-mode .order-tracking-card,
+body.premium-mode .social,
+body.premium-mode .admin-entry,
+body.premium-mode .premium-benefits{
+    width:min(1440px, calc(100% - 72px));
+    margin-left:auto;
+    margin-right:auto;
+}
+
+body.premium-mode .control-card{
+    margin-top:-170px;
+    margin-bottom:28px;
+    padding:34px;
+    border-radius:34px;
+    background:rgba(255,253,249,0.96);
+    border:1px solid rgba(126,91,51,0.14);
+    box-shadow:0 32px 90px rgba(71,48,27,0.16);
+}
+
+body.dark.premium-mode .control-card{
+    background:rgba(34,31,27,0.96);
+}
+
+body.premium-mode .control-card > h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:44px;
+    line-height:1;
+    margin-bottom:22px;
+}
+
+body.premium-mode .selection-box{
+    padding:26px;
+    border-radius:28px;
+    background:linear-gradient(145deg, rgba(255,253,249,0.96), rgba(250,244,235,0.96));
+}
+
+body.dark.premium-mode .selection-box{
+    background:linear-gradient(145deg, rgba(38,35,31,0.98), rgba(31,29,26,0.98));
+}
+
+body.premium-mode .selection-grid,
+body.premium-mode .system-mode-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+
+body.premium-mode .system-mode-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+body.premium-mode .global-selection.show{
+    display:grid;
+    grid-template-columns:minmax(280px, .85fr) minmax(480px, 1.45fr);
+    column-gap:30px;
+    align-items:start;
+}
+
+body.premium-mode .global-selection.show > .section-title,
+body.premium-mode .global-selection.show > .product-grid{
+    grid-column:1;
+}
+
+body.premium-mode .global-selection.show #globalColorArea{
+    grid-column:2;
+    grid-row:1 / span 6;
+}
+
+body.premium-mode .product-grid,
+body.premium-mode .color-grid,
+body.premium-mode .fabric-grid{
+    gap:12px;
+}
+
+body.premium-mode .product-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+
+body.premium-mode .global-selection.show #globalColorArea .color-grid{
+    grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+}
+
+body.premium-mode .global-selection.show #globalColorArea .fabric-grid{
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+}
+
+body.premium-mode .catalog-actions{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:12px;
+}
+
+body.premium-mode #camArea{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(360px, 1fr));
+    gap:18px;
+    align-items:start;
+}
+
+body.premium-mode #camArea:empty{
+    display:none;
+}
+
+body.premium-mode .cam-block{
+    margin-bottom:0;
+}
+
+body.premium-mode .card:not(.control-card):not(.order-tracking-card){
+    padding:28px;
+    border-radius:30px;
+    background:rgba(255,253,249,0.88);
+    box-shadow:0 20px 50px rgba(71,48,27,0.08);
+}
+
+body.premium-mode .grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+    display:block;
+    width:min(1440px, calc(100% - 72px));
+    margin:24px auto;
+    min-height:58px;
+    font-size:15px;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+}
+
+body.premium-mode .result:not(:empty){
+    margin-top:28px;
+}
+
+body.premium-mode .summary-box{
+    border-radius:34px;
+    padding:28px;
+    background:rgba(255,253,249,0.96);
+    box-shadow:0 28px 80px rgba(71,48,27,0.14);
+}
+
+body.premium-mode .order-tracking-card{
+    margin-top:34px;
+    padding:28px;
+    border-radius:30px;
+}
+
+body.premium-mode .premium-benefits{
+    display:grid;
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+    gap:14px;
+    margin-top:34px;
+    margin-bottom:28px;
+}
+
+body.premium-mode .premium-benefit{
+    padding:22px;
+    border-radius:26px;
+    background:rgba(255,253,249,0.86);
+    border:1px solid rgba(126,91,51,0.13);
+    box-shadow:0 18px 48px rgba(71,48,27,0.08);
+}
+
+body.dark.premium-mode .premium-benefit{
+    background:rgba(34,31,27,0.86);
+}
+
+body.premium-mode .premium-benefit span{
+    display:block;
+    color:var(--accent-dark);
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+body.premium-mode .premium-benefit strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+body.premium-mode .premium-benefit small{
+    display:block;
+    color:var(--muted);
+    line-height:1.5;
+}
+
+body.premium-mode .social{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:12px;
+    padding:0;
+}
+
+body.premium-mode .social-item,
+body.premium-mode .note{
+    margin:0;
+    border-radius:22px;
+    background:rgba(255,253,249,0.82);
+}
+
+body.premium-mode .note{
+    grid-column:1 / -1;
+}
+
+body.premium-mode .admin-entry{
+    padding-bottom:38px;
+}
+
+@media(max-width:1180px){
+    body.premium-mode .premium-nav-links{
+        display:none;
+    }
+
+    body.premium-mode .premium-hero-trust{
+        width:min(720px, 78vw);
+    }
+
+    body.premium-mode .global-selection.show{
+        grid-template-columns:1fr;
+    }
+
+    body.premium-mode .global-selection.show #globalColorArea{
+        grid-column:auto;
+        grid-row:auto;
+        margin-top:18px;
+    }
+
+    body.premium-mode .premium-benefits{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media(max-width:760px){
+    body.premium-mode .header{
+        min-height:auto;
+        padding:92px 18px 150px;
+        text-align:left;
+        background:
+            linear-gradient(180deg, rgba(246,239,228,0.96) 0%, rgba(246,239,228,0.86) 58%, rgba(246,239,228,0.54) 100%),
+            url("./plisegörsel1.png") center/cover no-repeat;
+    }
+
+    body.dark.premium-mode .header{
+        background:
+            linear-gradient(180deg, rgba(23,21,19,0.95) 0%, rgba(23,21,19,0.88) 62%, rgba(23,21,19,0.66) 100%),
+            url("./plisegörsel1.png") center/cover no-repeat;
+    }
+
+    body.premium-mode .top-actions{
+        top:12px;
+        left:12px;
+        right:12px;
+        display:grid;
+        grid-template-columns:1fr auto auto;
+        border-radius:24px;
+        min-height:auto;
+    }
+
+    body.premium-mode .premium-nav-brand{
+        min-width:0;
+    }
+
+    body.premium-mode .premium-nav-brand strong{
+        font-size:19px;
+    }
+
+    body.premium-mode .premium-nav-brand span{
+        display:none;
+    }
+
+    body.premium-mode .measure-toggle{
+        display:none;
+    }
+
+    body.premium-mode .top-small-btn{
+        padding:10px 12px;
+        font-size:12px;
+    }
+
+    body.premium-mode .header h1{
+        max-width:330px;
+        font-size:58px;
+    }
+
+    body.premium-mode .hero-subtitle{
+        max-width:360px;
+        font-size:15px;
+    }
+
+    body.premium-mode .hero-badges{
+        gap:8px;
+    }
+
+    body.premium-mode .premium-hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        width:100%;
+    }
+
+    body.premium-mode .premium-hero-actions .btn-main,
+    body.premium-mode .premium-hero-actions .btn-light{
+        width:100%;
+    }
+
+    body.premium-mode .premium-hero-trust{
+        grid-template-columns:1fr;
+        width:100%;
+    }
+
+    body.premium-mode .control-card,
+    body.premium-mode #camArea,
+    body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+    body.premium-mode .result,
+    body.premium-mode .order-tracking-card,
+    body.premium-mode .social,
+    body.premium-mode .admin-entry,
+    body.premium-mode .premium-benefits,
+    body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+        width:calc(100% - 24px);
+    }
+
+    body.premium-mode .control-card{
+        margin-top:-102px;
+        padding:18px;
+        border-radius:26px;
+    }
+
+    body.premium-mode .control-card > h2{
+        font-size:34px;
+    }
+
+    body.premium-mode .selection-grid,
+    body.premium-mode .system-mode-grid,
+    body.premium-mode .product-grid,
+    body.premium-mode .catalog-actions,
+    body.premium-mode .grid,
+    body.premium-mode .social,
+    body.premium-mode .premium-benefits{
+        grid-template-columns:1fr;
+    }
+
+    body.premium-mode #camArea{
+        grid-template-columns:1fr;
+    }
+}
+
+/* PREMIUM MOD V2 - GENIS E-TICARET SAYFASI */
+body.premium-mode{
+    padding:18px;
+    background:
+        radial-gradient(circle at 14% 0%, rgba(196,160,111,.20), transparent 34%),
+        linear-gradient(135deg, #efe7db 0%, #faf7f1 48%, #e9dfd1 100%);
+}
+
+body.dark.premium-mode{
+    background:
+        radial-gradient(circle at 14% 0%, rgba(196,160,111,.12), transparent 34%),
+        linear-gradient(135deg, #161412 0%, #211e1a 58%, #151311 100%);
+}
+
+body.premium-mode .container{
+    width:min(1500px, calc(100% - 28px));
+    max-width:1500px;
+    margin:0 auto 42px;
+    border:1px solid rgba(126,91,51,.14);
+    border-radius:36px;
+    overflow:hidden;
+    background:#fffdf8;
+    box-shadow:0 36px 110px rgba(83,57,32,.16);
+}
+
+body.dark.premium-mode .container{
+    background:#201d19;
+    border-color:rgba(201,163,111,.16);
+}
+
+body.premium-mode .header{
+    min-height:690px;
+    padding:145px clamp(34px, 4.6vw, 76px) 238px;
+    border-radius:0;
+    background:
+        linear-gradient(90deg, rgba(255,253,248,.98) 0%, rgba(255,253,248,.90) 31%, rgba(255,253,248,.62) 50%, rgba(255,253,248,.12) 78%),
+        url("./plisegörsel1.png") center right/cover no-repeat;
+}
+
+body.dark.premium-mode .header{
+    background:
+        linear-gradient(90deg, rgba(32,29,25,.98) 0%, rgba(32,29,25,.89) 34%, rgba(32,29,25,.62) 58%, rgba(32,29,25,.22) 100%),
+        url("./plisegörsel1.png") center right/cover no-repeat;
+}
+
+body.premium-mode .header:after{
+    height:220px;
+    background:linear-gradient(180deg, rgba(255,253,248,0), #fffdf8 82%);
+}
+
+body.dark.premium-mode .header:after{
+    background:linear-gradient(180deg, rgba(32,29,25,0), #201d19 82%);
+}
+
+body.premium-mode .top-actions{
+    top:0;
+    left:0;
+    right:0;
+    min-height:94px;
+    padding:0 clamp(22px, 3vw, 48px);
+    border:0;
+    border-bottom:1px solid rgba(126,91,51,.12);
+    border-radius:0;
+    background:rgba(255,253,248,.93);
+    box-shadow:none;
+}
+
+body.dark.premium-mode .top-actions{
+    background:rgba(32,29,25,.92);
+    border-bottom-color:rgba(201,163,111,.14);
+}
+
+body.premium-mode .premium-nav-brand{
+    min-width:250px;
+    padding-left:0;
+}
+
+body.premium-mode .premium-nav-brand img{
+    width:48px;
+    height:48px;
+    border-radius:15px;
+}
+
+body.premium-mode .premium-nav-brand strong{
+    font-size:30px;
+}
+
+body.premium-mode .premium-nav-brand span{
+    font-size:11px;
+}
+
+body.premium-mode .premium-nav-links{
+    gap:18px;
+}
+
+body.premium-mode .premium-nav-links a{
+    position:relative;
+    padding:12px 0;
+    border-radius:0;
+    font-size:12.5px;
+    letter-spacing:.3px;
+    text-transform:uppercase;
+}
+
+body.premium-mode .premium-nav-links a:first-child:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:5px;
+    height:2px;
+    background:var(--accent);
+}
+
+body.premium-mode .premium-nav-links a:hover{
+    background:transparent;
+}
+
+body.premium-mode .top-small-btn{
+    padding:12px 15px;
+    border-radius:14px;
+    background:#fffdf8;
+}
+
+body.premium-mode .view-mode-btn{
+    min-width:98px;
+}
+
+body.premium-mode .theme-toggle{
+    display:none!important;
+}
+
+body.premium-mode .header h1{
+    max-width:520px;
+    font-size:clamp(58px, 5.8vw, 92px);
+    line-height:.92;
+}
+
+body.premium-mode .hero-kicker{
+    max-width:360px;
+    color:#6f4d2b;
+    font-family:"Cormorant Garamond", serif;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:0;
+    text-transform:none;
+    line-height:1.15;
+}
+
+body.premium-mode .hero-subtitle{
+    max-width:430px;
+    font-size:16px;
+    line-height:1.65;
+}
+
+body.premium-mode .hero-badges{
+    display:grid;
+    gap:14px;
+    margin-top:28px;
+}
+
+body.premium-mode .badge{
+    width:max-content;
+    min-height:34px;
+    padding:0;
+    border:0;
+    background:transparent;
+    box-shadow:none;
+    color:#3b332a;
+    font-weight:700;
+}
+
+body.dark.premium-mode .badge{
+    background:transparent;
+    color:#eadfce;
+}
+
+body.premium-mode .badge:before{
+    content:"";
+    width:22px;
+    height:22px;
+    border:1px solid rgba(126,91,51,.42);
+    border-radius:50%;
+    background:rgba(255,253,248,.7);
+    box-shadow:inset 0 0 0 5px rgba(167,125,79,.10);
+}
+
+body.premium-mode .premium-hero-actions{
+    display:none;
+}
+
+body.premium-mode .premium-hero-trust{
+    display:none;
+}
+
+body.premium-mode .control-card,
+body.premium-mode #camArea,
+body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+body.premium-mode .result,
+body.premium-mode .order-tracking-card,
+body.premium-mode .social,
+body.premium-mode .admin-entry,
+body.premium-mode .premium-benefits{
+    width:calc(100% - clamp(46px, 5vw, 84px));
+    max-width:none;
+}
+
+body.premium-mode .control-card{
+    margin-top:-172px;
+    padding:32px;
+    border-radius:26px;
+    background:rgba(255,253,248,.97);
+    border:1px solid rgba(126,91,51,.12);
+    box-shadow:0 28px 90px rgba(74,50,28,.16);
+}
+
+body.dark.premium-mode .control-card{
+    background:rgba(35,32,28,.97);
+}
+
+body.premium-mode .control-card > h2{
+    margin-bottom:24px;
+    font-size:34px;
+}
+
+body.premium-mode .control-card > .field{
+    max-width:330px;
+    margin-bottom:14px;
+}
+
+body.premium-mode .control-card > .hint{
+    max-width:760px;
+    margin-bottom:22px;
+}
+
+body.premium-mode .selection-box{
+    padding:0;
+    border:0;
+    background:transparent;
+    box-shadow:none;
+}
+
+body.premium-mode .selection-title,
+body.premium-mode .section-title{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin-bottom:12px;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+}
+
+body.premium-mode .selection-title:before,
+body.premium-mode .section-title:before{
+    counter-increment:premiumStep;
+    content:counter(premiumStep);
+    width:22px;
+    height:22px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(126,91,51,.42);
+    border-radius:50%;
+    color:var(--accent-dark);
+    font-size:12px;
+}
+
+body.premium-mode .selection-box{
+    counter-reset:premiumStep;
+}
+
+body.premium-mode .selection-grid,
+body.premium-mode .system-mode-grid{
+    gap:12px;
+}
+
+body.premium-mode .selection-option,
+body.premium-mode .system-mode-option,
+body.premium-mode .product-choice,
+body.premium-mode .choice{
+    min-height:68px;
+    border-radius:14px;
+    background:#fff;
+    border-color:rgba(126,91,51,.14);
+}
+
+body.dark.premium-mode .selection-option,
+body.dark.premium-mode .system-mode-option,
+body.dark.premium-mode .product-choice,
+body.dark.premium-mode .choice{
+    background:#24211d;
+}
+
+body.premium-mode .selection-option:has(input:checked),
+body.premium-mode .system-mode-option:has(input:checked),
+body.premium-mode .product-choice.active,
+body.premium-mode .choice.active{
+    background:#f3e2c9;
+    border-color:#c59560;
+    box-shadow:none;
+}
+
+body.premium-mode .global-selection.show{
+    margin-top:28px;
+    display:grid;
+    grid-template-columns:minmax(270px,.9fr) minmax(540px,1.65fr);
+    gap:0 34px;
+    padding-top:26px;
+    border-top:1px solid rgba(126,91,51,.10);
+}
+
+body.premium-mode .product-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+body.premium-mode .product-choice{
+    min-height:118px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+body.premium-mode .product-choice strong{
+    font-size:13px;
+}
+
+body.premium-mode .product-choice small{
+    display:none;
+}
+
+body.premium-mode .global-selection.show #globalColorArea{
+    padding-left:34px;
+    border-left:1px solid rgba(126,91,51,.10);
+}
+
+body.premium-mode .global-selection.show #globalColorArea .color-grid{
+    grid-template-columns:repeat(auto-fit, minmax(126px,1fr));
+}
+
+body.premium-mode .global-selection.show #globalColorArea .fabric-grid{
+    grid-template-columns:repeat(auto-fit, minmax(138px,1fr));
+}
+
+body.premium-mode .catalog-actions{
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid rgba(126,91,51,.10);
+}
+
+body.premium-mode #camArea{
+    margin-top:22px;
+    grid-template-columns:repeat(auto-fit,minmax(410px,1fr));
+}
+
+body.premium-mode .cam-block{
+    border-radius:24px;
+}
+
+body.premium-mode .cam-header{
+    min-height:68px;
+    padding:18px 20px;
+}
+
+body.premium-mode .cam-body{
+    padding:0 20px 22px;
+}
+
+body.premium-mode .card:not(.control-card):not(.order-tracking-card){
+    margin-top:24px;
+    border-radius:26px;
+}
+
+body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+    width:calc(100% - clamp(46px, 5vw, 84px));
+    margin-top:22px;
+    border-radius:16px;
+    min-height:60px;
+    background:#1c1915;
+}
+
+body.premium-mode .premium-benefits{
+    margin-top:10px;
+    padding:18px 0 0;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+}
+
+body.premium-mode .premium-benefit{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    column-gap:12px;
+    padding:20px;
+    border-radius:20px;
+    background:#fffdf8;
+    box-shadow:0 14px 42px rgba(74,50,28,.06);
+}
+
+body.premium-mode .premium-benefit span{
+    grid-row:1 / span 2;
+    width:42px;
+    height:42px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(126,91,51,.28);
+    border-radius:50%;
+    font-size:13px;
+    margin:0;
+}
+
+body.premium-mode .premium-benefit strong{
+    margin:0 0 4px;
+}
+
+body.premium-mode .premium-benefit small{
+    font-size:12px;
+}
+
+body.premium-mode .summary-box{
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) minmax(310px,.75fr);
+    gap:24px;
+}
+
+body.premium-mode .summary-head,
+body.premium-mode .summary-section,
+body.premium-mode .summary-actions{
+    grid-column:1 / -1;
+}
+
+body.premium-mode .price-row.grand{
+    padding:22px;
+    background:#211d18;
+}
+
+body.premium-mode .result-actions{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+body.premium-mode .social{
+    margin-top:24px;
+    padding-bottom:0;
+}
+
+@media(max-width:1180px){
+    body.premium-mode .container{
+        width:calc(100% - 24px);
+        border-radius:28px;
+    }
+
+    body.premium-mode .header{
+        min-height:640px;
+    }
+
+    body.premium-mode .global-selection.show{
+        grid-template-columns:1fr;
+    }
+
+    body.premium-mode .global-selection.show #globalColorArea{
+        padding-left:0;
+        border-left:0;
+    }
+
+    body.premium-mode .premium-benefits{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:760px){
+    body.premium-mode{
+        padding:8px;
+    }
+
+    body.premium-mode .container{
+        width:100%;
+        border-radius:22px;
+    }
+
+    body.premium-mode .header{
+        min-height:700px;
+        padding:92px 18px 164px;
+        background:
+            linear-gradient(180deg, rgba(255,253,248,.98) 0%, rgba(255,253,248,.86) 58%, rgba(255,253,248,.44) 100%),
+            url("./plisegörsel1.png") center/cover no-repeat;
+    }
+
+    body.dark.premium-mode .header{
+        background:
+            linear-gradient(180deg, rgba(32,29,25,.96) 0%, rgba(32,29,25,.88) 62%, rgba(32,29,25,.58) 100%),
+            url("./plisegörsel1.png") center/cover no-repeat;
+    }
+
+    body.premium-mode .top-actions{
+        min-height:74px;
+        padding:10px 12px;
+        grid-template-columns:1fr auto;
+    }
+
+    body.premium-mode .view-mode-btn{
+        font-size:0!important;
+        width:40px;
+        height:40px;
+        padding:0;
+        border-radius:50%;
+    }
+
+    body.premium-mode .view-mode-btn:before{
+        content:"P";
+        font-size:13px;
+    }
+
+    body.premium-mode .header h1{
+        font-size:54px;
+    }
+
+    body.premium-mode .hero-kicker{
+        font-size:20px;
+    }
+
+    body.premium-mode .hero-badges{
+        display:none;
+    }
+
+    body.premium-mode .control-card,
+    body.premium-mode #camArea,
+    body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+    body.premium-mode .result,
+    body.premium-mode .order-tracking-card,
+    body.premium-mode .social,
+    body.premium-mode .admin-entry,
+    body.premium-mode .premium-benefits,
+    body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+        width:calc(100% - 20px);
+    }
+
+    body.premium-mode .control-card{
+        margin-top:-108px;
+        padding:18px;
+    }
+
+    body.premium-mode .selection-grid,
+    body.premium-mode .system-mode-grid,
+    body.premium-mode .product-grid,
+    body.premium-mode .catalog-actions,
+    body.premium-mode .grid,
+    body.premium-mode .social,
+    body.premium-mode .premium-benefits,
+    body.premium-mode .result-actions{
+        grid-template-columns:1fr;
+    }
+
+    body.premium-mode #camArea{
+        grid-template-columns:1fr;
+    }
+
+    body.premium-mode .premium-benefit{
+        grid-template-columns:auto 1fr;
+    }
+}
+
+/* PREMIUM MOD V3 - TAM GENISLIK MARKA SAYFASI */
+body.premium-mode,
+body.dark.premium-mode{
+    --body-bg:#f2ece2;
+    --card-bg:#fffdf8;
+    --panel-bg:#f8f2e8;
+    --soft-bg:#efe4d4;
+    --text:#211d18;
+    --muted:#655b50;
+    --border:#e1d4c2;
+    --input-border:#d9cabb;
+    --button-bg:#1d1914;
+    --button-hover:#31281f;
+    --accent:#a7794a;
+    --accent-dark:#76502d;
+    --accent-soft:#f0dfc8;
+    padding:0!important;
+    background:#f2ece2!important;
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body.premium-mode .container,
+body.dark.premium-mode .container{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    overflow:visible!important;
+    background:#f2ece2!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+}
+
+body.premium-mode .top-actions,
+body.dark.premium-mode .top-actions{
+    position:absolute!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    z-index:20;
+    min-height:92px!important;
+    padding:0 clamp(26px, 5vw, 88px)!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:14px!important;
+    border:0!important;
+    border-bottom:1px solid rgba(126,91,51,.12)!important;
+    border-radius:0!important;
+    background:rgba(255,253,248,.96)!important;
+    box-shadow:0 16px 46px rgba(82,56,31,.08)!important;
+    backdrop-filter:blur(18px);
+}
+
+body.premium-mode .premium-nav-brand,
+body.premium-mode .premium-nav-links{
+    display:flex!important;
+}
+
+body.premium-mode .premium-nav-brand{
+    min-width:245px!important;
+    margin-right:clamp(18px, 2.4vw, 44px)!important;
+    padding:0!important;
+    align-items:center!important;
+    gap:13px!important;
+}
+
+body.premium-mode .premium-nav-brand img{
+    width:46px!important;
+    height:46px!important;
+    object-fit:contain!important;
+    border-radius:14px!important;
+    background:#fff!important;
+    box-shadow:0 10px 28px rgba(67,45,26,.11)!important;
+}
+
+body.premium-mode .premium-nav-brand strong{
+    font-family:"Cormorant Garamond", serif!important;
+    font-size:30px!important;
+    line-height:.95!important;
+    color:#1f1b17!important;
+}
+
+body.premium-mode .premium-nav-brand span{
+    margin-top:4px!important;
+    display:block!important;
+    color:#786950!important;
+    font-size:10px!important;
+    font-weight:800!important;
+    letter-spacing:1.2px!important;
+    text-transform:uppercase!important;
+}
+
+body.premium-mode .premium-nav-links{
+    flex:1!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:clamp(14px, 2.3vw, 36px)!important;
+}
+
+body.premium-mode .premium-nav-links a{
+    padding:12px 0!important;
+    border-radius:0!important;
+    color:#27211b!important;
+    font-size:12px!important;
+    font-weight:850!important;
+    letter-spacing:.45px!important;
+    text-transform:uppercase!important;
+    text-decoration:none!important;
+}
+
+body.premium-mode .premium-nav-links a:hover{
+    background:transparent!important;
+    color:var(--accent-dark)!important;
+}
+
+body.premium-mode .premium-nav-links a:first-child{
+    position:relative;
+}
+
+body.premium-mode .premium-nav-links a:first-child:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:4px;
+    height:2px;
+    background:var(--accent);
+}
+
+body.premium-mode .top-small-btn{
+    min-width:auto!important;
+    min-height:44px!important;
+    padding:11px 16px!important;
+    border-radius:999px!important;
+    border:1px solid rgba(126,91,51,.16)!important;
+    background:#fffdf8!important;
+    color:#252018!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .theme-toggle{
+    display:none!important;
+}
+
+body.premium-mode .header,
+body.dark.premium-mode .header{
+    position:relative!important;
+    min-height:790px!important;
+    margin:0!important;
+    padding:118px clamp(30px, 7vw, 116px) 270px!important;
+    border:0!important;
+    border-radius:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    overflow:hidden!important;
+    background:
+        linear-gradient(90deg, rgba(248,242,232,.98) 0%, rgba(248,242,232,.94) 30%, rgba(248,242,232,.62) 52%, rgba(248,242,232,.12) 78%),
+        url("./plisegörsel1.png") center right/cover no-repeat!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .header:after,
+body.dark.premium-mode .header:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-1px;
+    height:230px!important;
+    background:linear-gradient(180deg, rgba(242,236,226,0), #f2ece2 82%)!important;
+    pointer-events:none;
+}
+
+body.premium-mode .logo-shell,
+body.premium-mode .header > h1,
+body.premium-mode .hero-kicker,
+body.premium-mode .hero-subtitle{
+    display:none!important;
+}
+
+body.premium-mode .premium-hero-copy{
+    position:relative;
+    z-index:2;
+    display:block!important;
+    width:min(560px, 48vw);
+    color:#201b15;
+}
+
+body.premium-mode .premium-hero-copy .premium-eyebrow{
+    margin:0 0 18px;
+    font-family:"Cormorant Garamond", serif;
+    color:#6f4d2b;
+    font-size:clamp(22px, 2vw, 32px);
+    font-weight:700;
+    line-height:1.08;
+}
+
+body.premium-mode .premium-hero-copy h2{
+    margin:0;
+    font-family:"Cormorant Garamond", serif;
+    font-size:clamp(64px, 7.2vw, 116px);
+    line-height:.9;
+    letter-spacing:0;
+}
+
+body.premium-mode .premium-hero-copy p:last-child{
+    max-width:470px;
+    margin:26px 0 0;
+    color:#4d453d;
+    font-size:18px;
+    line-height:1.72;
+}
+
+body.premium-mode .hero-badges{
+    position:relative;
+    z-index:2;
+    display:grid!important;
+    gap:14px!important;
+    justify-content:flex-start!important;
+    margin:34px 0 0!important;
+}
+
+body.premium-mode .badge{
+    width:max-content!important;
+    min-height:28px!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    color:#31291f!important;
+    font-weight:700!important;
+}
+
+body.premium-mode .badge:before{
+    content:"";
+    width:22px!important;
+    height:22px!important;
+    border:1px solid rgba(126,91,51,.38)!important;
+    border-radius:50%!important;
+    background:rgba(255,253,248,.74)!important;
+    box-shadow:inset 0 0 0 5px rgba(167,125,79,.10)!important;
+}
+
+body.premium-mode .premium-hero-actions,
+body.premium-mode .premium-hero-trust{
+    display:none!important;
+}
+
+body.premium-mode .price-status{
+    display:none!important;
+}
+
+body.premium-mode .control-card,
+body.premium-mode #camArea,
+body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+body.premium-mode .result,
+body.premium-mode .order-tracking-card,
+body.premium-mode .social,
+body.premium-mode .admin-entry,
+body.premium-mode .premium-benefits,
+body.premium-mode .premium-stats,
+body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+    width:min(1480px, calc(100% - clamp(36px, 7vw, 136px)))!important;
+    max-width:1480px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+}
+
+body.premium-mode .control-card{
+    position:relative!important;
+    z-index:5!important;
+    margin-top:-160px!important;
+    margin-bottom:30px!important;
+    padding:clamp(28px, 3.2vw, 52px)!important;
+    border-radius:34px!important;
+    border:1px solid rgba(126,91,51,.13)!important;
+    background:rgba(255,253,248,.98)!important;
+    box-shadow:0 34px 110px rgba(75,51,30,.18)!important;
+}
+
+body.premium-mode .control-card > h2{
+    margin:0 0 24px!important;
+    font-family:"Cormorant Garamond", serif!important;
+    color:#211d18!important;
+    font-size:clamp(36px, 3.2vw, 54px)!important;
+    line-height:1!important;
+}
+
+body.premium-mode .control-card > .field{
+    max-width:360px!important;
+    margin-bottom:14px!important;
+}
+
+body.premium-mode .control-card > .hint{
+    max-width:820px!important;
+    margin-bottom:26px!important;
+    color:#6a5f52!important;
+}
+
+body.premium-mode .selection-box{
+    display:grid!important;
+    grid-template-columns:minmax(290px, .82fr) minmax(360px, 1fr)!important;
+    gap:28px 34px!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    counter-reset:premiumStep;
+}
+
+body.premium-mode .selection-box > .selection-title,
+body.premium-mode .selection-box > .selection-grid{
+    grid-column:1!important;
+}
+
+body.premium-mode .system-mode-box{
+    grid-column:2!important;
+    grid-row:1 / span 2!important;
+    margin:0!important;
+    padding:0!important;
+}
+
+body.premium-mode .global-selection.show{
+    grid-column:1 / -1!important;
+    margin-top:4px!important;
+    padding-top:30px!important;
+    border-top:1px solid rgba(126,91,51,.10)!important;
+    display:grid!important;
+    grid-template-columns:minmax(500px, .85fr) minmax(0, 1.15fr)!important;
+    gap:0 38px!important;
+    align-items:start!important;
+}
+
+body.premium-mode .selection-title,
+body.premium-mode .section-title{
+    display:flex!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin:0 0 14px!important;
+    color:#2c261f!important;
+    font-size:12px!important;
+    font-weight:850!important;
+    letter-spacing:.55px!important;
+    text-transform:uppercase!important;
+}
+
+body.premium-mode .selection-title:before,
+body.premium-mode .section-title:before{
+    counter-increment:premiumStep;
+    content:counter(premiumStep);
+    width:22px!important;
+    height:22px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border:1px solid rgba(126,91,51,.42)!important;
+    border-radius:50%!important;
+    color:var(--accent-dark)!important;
+    font-size:12px!important;
+    font-weight:800!important;
+}
+
+body.premium-mode .selection-grid,
+body.premium-mode .system-mode-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr))!important;
+    gap:12px!important;
+}
+
+body.premium-mode .system-mode-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr))!important;
+}
+
+body.premium-mode .selection-option,
+body.premium-mode .system-mode-option,
+body.premium-mode .product-choice,
+body.premium-mode .choice,
+body.premium-mode input,
+body.premium-mode select,
+body.premium-mode textarea{
+    border-color:rgba(126,91,51,.15)!important;
+    background:#fff!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .selection-option,
+body.premium-mode .system-mode-option{
+    min-height:76px!important;
+    border-radius:18px!important;
+}
+
+body.premium-mode .selection-option:has(input:checked),
+body.premium-mode .system-mode-option:has(input:checked),
+body.premium-mode .product-choice.active,
+body.premium-mode .choice.active{
+    border-color:#c59661!important;
+    background:#f4e3cb!important;
+}
+
+body.premium-mode .product-grid{
+    grid-template-columns:repeat(4, minmax(0, 1fr))!important;
+    gap:12px!important;
+}
+
+body.premium-mode .product-choice{
+    min-height:126px!important;
+    border-radius:18px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+}
+
+body.premium-mode .product-choice small{
+    display:none!important;
+}
+
+body.premium-mode .global-selection.show #globalColorArea{
+    grid-column:2!important;
+    grid-row:1 / span 8!important;
+    padding-left:38px!important;
+    border-left:1px solid rgba(126,91,51,.10)!important;
+}
+
+body.premium-mode .global-selection.show #globalColorArea .color-grid{
+    grid-template-columns:repeat(auto-fit, minmax(130px, 1fr))!important;
+    gap:12px!important;
+}
+
+body.premium-mode .global-selection.show #globalColorArea .fabric-grid{
+    grid-template-columns:repeat(auto-fit, minmax(145px, 1fr))!important;
+    gap:12px!important;
+}
+
+body.premium-mode .catalog-actions{
+    grid-template-columns:repeat(4, minmax(0, 1fr))!important;
+    margin-top:30px!important;
+    padding-top:24px!important;
+    border-top:1px solid rgba(126,91,51,.10)!important;
+}
+
+body.premium-mode #camArea{
+    display:grid!important;
+    grid-template-columns:repeat(auto-fit, minmax(420px, 1fr))!important;
+    gap:20px!important;
+    margin-top:24px!important;
+}
+
+body.premium-mode #camArea:empty{
+    display:none!important;
+}
+
+body.premium-mode .cam-block,
+body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+body.premium-mode .summary-box,
+body.premium-mode .order-tracking-card,
+body.premium-mode .tracking-status-card{
+    border-radius:26px!important;
+    border-color:rgba(126,91,51,.13)!important;
+    background:rgba(255,253,248,.96)!important;
+    box-shadow:0 20px 56px rgba(75,51,30,.08)!important;
+}
+
+body.premium-mode .card:not(.control-card):not(.order-tracking-card){
+    margin-top:24px!important;
+    padding:30px!important;
+}
+
+body.premium-mode .grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr))!important;
+}
+
+body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+    display:block!important;
+    min-height:64px!important;
+    margin-top:24px!important;
+    margin-bottom:30px!important;
+    border-radius:16px!important;
+    background:#1d1914!important;
+    color:#fff!important;
+    font-size:15px!important;
+    letter-spacing:1px!important;
+    text-transform:uppercase!important;
+    box-shadow:0 22px 44px rgba(36,28,20,.22)!important;
+}
+
+body.premium-mode .result:not(:empty){
+    margin-top:0!important;
+    margin-bottom:30px!important;
+}
+
+body.premium-mode .summary-box{
+    padding:32px!important;
+}
+
+body.premium-mode .price-row.grand{
+    border-radius:22px!important;
+    background:#211d18!important;
+}
+
+body.premium-mode .result-actions{
+    display:grid!important;
+    grid-template-columns:repeat(2, minmax(0, 1fr))!important;
+    gap:12px!important;
+}
+
+body.premium-mode .premium-benefits{
+    display:grid!important;
+    grid-template-columns:repeat(5, minmax(0, 1fr))!important;
+    gap:14px!important;
+    margin-top:4px!important;
+    margin-bottom:16px!important;
+}
+
+body.premium-mode .premium-benefit{
+    display:grid!important;
+    grid-template-columns:auto 1fr!important;
+    align-items:center!important;
+    column-gap:13px!important;
+    padding:22px!important;
+    border:1px solid rgba(126,91,51,.10)!important;
+    border-radius:22px!important;
+    background:#fffdf8!important;
+    box-shadow:0 14px 42px rgba(75,51,30,.06)!important;
+}
+
+body.premium-mode .premium-benefit span{
+    grid-row:1 / span 2!important;
+    width:42px!important;
+    height:42px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    margin:0!important;
+    border:1px solid rgba(126,91,51,.28)!important;
+    border-radius:50%!important;
+    color:#6f4d2b!important;
+    font-size:12px!important;
+    font-weight:900!important;
+}
+
+body.premium-mode .premium-benefit strong{
+    margin:0 0 4px!important;
+    font-size:13px!important;
+    letter-spacing:.2px!important;
+}
+
+body.premium-mode .premium-benefit small{
+    color:#6b6156!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+}
+
+body.premium-mode .premium-stats{
+    display:grid!important;
+    grid-template-columns:repeat(4, minmax(0, 1fr))!important;
+    gap:14px!important;
+    margin-top:0!important;
+    margin-bottom:34px!important;
+}
+
+body.premium-mode .premium-stat{
+    padding:22px 24px!important;
+    border:1px solid rgba(126,91,51,.10)!important;
+    border-radius:20px!important;
+    background:#fffdf8!important;
+    box-shadow:0 14px 42px rgba(75,51,30,.05)!important;
+}
+
+body.premium-mode .premium-stat strong{
+    display:block!important;
+    margin-bottom:5px!important;
+    color:#201b15!important;
+    font-size:20px!important;
+}
+
+body.premium-mode .premium-stat span{
+    color:#6b6156!important;
+    font-size:12px!important;
+}
+
+body.premium-mode .order-tracking-card,
+body.premium-mode .social,
+body.premium-mode .admin-entry{
+    margin-top:24px!important;
+}
+
+@media(max-width:1180px){
+    body.premium-mode .top-actions{
+        min-height:82px!important;
+    }
+
+    body.premium-mode .premium-nav-links{
+        display:none!important;
+    }
+
+    body.premium-mode .header{
+        min-height:720px!important;
+        padding-bottom:220px!important;
+        background:
+            linear-gradient(90deg, rgba(248,242,232,.98) 0%, rgba(248,242,232,.90) 42%, rgba(248,242,232,.40) 100%),
+            url("./plisegörsel1.png") center right/cover no-repeat!important;
+    }
+
+    body.premium-mode .premium-hero-copy{
+        width:min(540px, 62vw)!important;
+    }
+
+    body.premium-mode .selection-box,
+    body.premium-mode .global-selection.show{
+        grid-template-columns:1fr!important;
+    }
+
+    body.premium-mode .system-mode-box,
+    body.premium-mode .global-selection.show #globalColorArea{
+        grid-column:1!important;
+        grid-row:auto!important;
+        padding-left:0!important;
+        border-left:0!important;
+    }
+
+    body.premium-mode .product-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr))!important;
+    }
+
+    body.premium-mode .premium-benefits,
+    body.premium-mode .premium-stats{
+        grid-template-columns:repeat(2, minmax(0, 1fr))!important;
+    }
+}
+
+@media(max-width:760px){
+    body.premium-mode,
+    body.dark.premium-mode{
+        background:#f2ece2!important;
+    }
+
+    body.premium-mode .top-actions{
+        position:absolute!important;
+        min-height:74px!important;
+        padding:10px 14px!important;
+        gap:8px!important;
+    }
+
+    body.premium-mode .premium-nav-brand{
+        min-width:0!important;
+        margin-right:auto!important;
+    }
+
+    body.premium-mode .premium-nav-brand img{
+        width:38px!important;
+        height:38px!important;
+    }
+
+    body.premium-mode .premium-nav-brand strong{
+        font-size:22px!important;
+    }
+
+    body.premium-mode .premium-nav-brand span,
+    body.premium-mode .measure-toggle{
+        display:none!important;
+    }
+
+    body.premium-mode .view-mode-btn{
+        width:auto!important;
+        min-width:82px!important;
+        height:40px!important;
+        padding:0 12px!important;
+        font-size:11px!important;
+    }
+
+    body.premium-mode .header{
+        min-height:720px!important;
+        padding:96px 20px 168px!important;
+        background:
+            linear-gradient(180deg, rgba(248,242,232,.98) 0%, rgba(248,242,232,.90) 48%, rgba(248,242,232,.42) 100%),
+            url("./plisegörsel1.png") center/cover no-repeat!important;
+    }
+
+    body.premium-mode .premium-hero-copy{
+        width:100%!important;
+    }
+
+    body.premium-mode .premium-hero-copy h2{
+        font-size:58px!important;
+    }
+
+    body.premium-mode .premium-hero-copy p:last-child{
+        font-size:15px!important;
+    }
+
+    body.premium-mode .hero-badges{
+        display:none!important;
+    }
+
+    body.premium-mode .control-card,
+    body.premium-mode #camArea,
+    body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+    body.premium-mode .result,
+    body.premium-mode .order-tracking-card,
+    body.premium-mode .social,
+    body.premium-mode .admin-entry,
+    body.premium-mode .premium-benefits,
+    body.premium-mode .premium-stats,
+    body.premium-mode .container > .btn-main[onclick="calculateAll()"]{
+        width:calc(100% - 24px)!important;
+    }
+
+    body.premium-mode .control-card{
+        margin-top:-102px!important;
+        padding:20px!important;
+        border-radius:26px!important;
+    }
+
+    body.premium-mode .control-card > h2{
+        font-size:34px!important;
+    }
+
+    body.premium-mode .selection-grid,
+    body.premium-mode .system-mode-grid,
+    body.premium-mode .product-grid,
+    body.premium-mode .catalog-actions,
+    body.premium-mode .grid,
+    body.premium-mode .result-actions,
+    body.premium-mode .premium-benefits,
+    body.premium-mode .premium-stats{
+        grid-template-columns:1fr!important;
+    }
+
+    body.premium-mode #camArea{
+        grid-template-columns:1fr!important;
+    }
+
+    body.premium-mode .card:not(.control-card):not(.order-tracking-card){
+        padding:20px!important;
+    }
+}
+
+/* PREMIUM MOD V4 - TEMIZ APPLE BENZERI NOTR DUZEN */
+html:has(body.premium-mode){
+    scroll-behavior:smooth;
+}
+
+body.premium-mode,
+body.dark.premium-mode{
+    --body-bg:#f5f5f7;
+    --card-bg:#ffffff;
+    --panel-bg:#fbfbfd;
+    --soft-bg:#f5f5f7;
+    --text:#1d1d1f;
+    --muted:#6e6e73;
+    --border:#d2d2d7;
+    --input-border:#d2d2d7;
+    --button-bg:#1d1d1f;
+    --button-hover:#000000;
+    --accent:#0071e3;
+    --accent-dark:#005bb5;
+    --accent-soft:#e8f2ff;
+    background:#f5f5f7!important;
+    color:#1d1d1f!important;
+}
+
+body.premium-mode .container,
+body.dark.premium-mode .container{
+    background:#f5f5f7!important;
+}
+
+body.premium-mode .top-actions,
+body.dark.premium-mode .top-actions{
+    position:fixed!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    min-height:76px!important;
+    padding:0 clamp(28px, 5vw, 88px)!important;
+    background:rgba(255,255,255,.86)!important;
+    border-bottom:1px solid rgba(0,0,0,.08)!important;
+    box-shadow:none!important;
+    backdrop-filter:saturate(180%) blur(20px)!important;
+}
+
+body.premium-mode .premium-nav-brand{
+    min-width:240px!important;
+}
+
+body.premium-mode .premium-nav-brand img{
+    width:40px!important;
+    height:40px!important;
+    border-radius:12px!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .premium-nav-brand strong{
+    font-family:"Inter", Arial, sans-serif!important;
+    font-size:24px!important;
+    font-weight:700!important;
+    letter-spacing:-.3px!important;
+}
+
+body.premium-mode .premium-nav-brand span{
+    color:#6e6e73!important;
+    font-size:9px!important;
+    letter-spacing:1.4px!important;
+}
+
+body.premium-mode .premium-nav-links{
+    gap:clamp(18px, 2.6vw, 42px)!important;
+}
+
+body.premium-mode .premium-nav-links a{
+    color:#1d1d1f!important;
+    font-size:12px!important;
+    font-weight:700!important;
+    letter-spacing:.2px!important;
+}
+
+body.premium-mode .premium-nav-links a:first-child:after{
+    background:#1d1d1f!important;
+}
+
+body.premium-mode .top-small-btn{
+    min-height:38px!important;
+    padding:8px 14px!important;
+    border:1px solid rgba(0,0,0,.12)!important;
+    background:#ffffff!important;
+    color:#1d1d1f!important;
+    font-size:12px!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .header,
+body.dark.premium-mode .header{
+    min-height:760px!important;
+    padding:116px clamp(34px, 7vw, 124px) 220px!important;
+    background:
+        linear-gradient(90deg, rgba(245,245,247,.99) 0%, rgba(245,245,247,.96) 28%, rgba(245,245,247,.72) 50%, rgba(245,245,247,.16) 79%),
+        url("./plisegörsel1.png") center right/cover no-repeat!important;
+    background-color:#f5f5f7!important;
+}
+
+body.premium-mode .header:after,
+body.dark.premium-mode .header:after{
+    height:170px!important;
+    background:linear-gradient(180deg, rgba(245,245,247,0), #f5f5f7 82%)!important;
+}
+
+body.premium-mode .premium-hero-copy{
+    width:min(560px, 50vw)!important;
+}
+
+body.premium-mode .premium-hero-copy .premium-eyebrow{
+    font-family:"Inter", Arial, sans-serif!important;
+    color:#6e6e73!important;
+    font-size:20px!important;
+    font-weight:600!important;
+    letter-spacing:-.2px!important;
+}
+
+body.premium-mode .premium-hero-copy h2{
+    font-family:"Inter", Arial, sans-serif!important;
+    font-size:clamp(56px, 5.8vw, 92px)!important;
+    line-height:.96!important;
+    font-weight:760!important;
+    letter-spacing:-2.6px!important;
+}
+
+body.premium-mode .premium-hero-copy p:last-child{
+    color:#424245!important;
+    font-size:19px!important;
+    line-height:1.55!important;
+}
+
+body.premium-mode .hero-badges{
+    gap:12px!important;
+    margin-top:30px!important;
+}
+
+body.premium-mode .badge{
+    color:#1d1d1f!important;
+    font-size:14px!important;
+    font-weight:600!important;
+}
+
+body.premium-mode .badge:before{
+    width:20px!important;
+    height:20px!important;
+    border-color:#d2d2d7!important;
+    background:#ffffff!important;
+    box-shadow:inset 0 0 0 6px #f5f5f7!important;
+}
+
+body.premium-mode #quoteSection,
+body.premium-mode #orderTrackingSection,
+body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+body.premium-mode .result,
+body.premium-mode .social,
+body.premium-mode .admin-entry{
+    scroll-margin-top:104px;
+}
+
+body.premium-mode .control-card{
+    margin-top:-118px!important;
+    padding:clamp(30px, 3.4vw, 54px)!important;
+    border:1px solid rgba(0,0,0,.08)!important;
+    border-radius:30px!important;
+    background:#ffffff!important;
+    box-shadow:0 28px 70px rgba(0,0,0,.10)!important;
+}
+
+body.premium-mode .control-card > h2{
+    font-family:"Inter", Arial, sans-serif!important;
+    font-size:clamp(34px, 3vw, 48px)!important;
+    line-height:1.08!important;
+    font-weight:720!important;
+    letter-spacing:-1.5px!important;
+}
+
+body.premium-mode .control-card > .hint,
+body.premium-mode .premium-benefit small,
+body.premium-mode .premium-stat span{
+    color:#6e6e73!important;
+}
+
+body.premium-mode .selection-title,
+body.premium-mode .section-title{
+    color:#1d1d1f!important;
+    font-size:12px!important;
+    font-weight:760!important;
+    letter-spacing:.25px!important;
+}
+
+body.premium-mode .selection-title:before,
+body.premium-mode .section-title:before{
+    color:#1d1d1f!important;
+    border-color:#c7c7cc!important;
+    background:#ffffff!important;
+}
+
+body.premium-mode .selection-option,
+body.premium-mode .system-mode-option,
+body.premium-mode .product-choice,
+body.premium-mode .choice,
+body.premium-mode input,
+body.premium-mode select,
+body.premium-mode textarea{
+    border-color:rgba(0,0,0,.10)!important;
+    background:#ffffff!important;
+    color:#1d1d1f!important;
+}
+
+body.premium-mode .selection-option,
+body.premium-mode .system-mode-option,
+body.premium-mode .product-choice,
+body.premium-mode .choice{
+    border-radius:18px!important;
+}
+
+body.premium-mode .selection-option:has(input:checked),
+body.premium-mode .system-mode-option:has(input:checked),
+body.premium-mode .product-choice.active,
+body.premium-mode .choice.active{
+    border-color:#0071e3!important;
+    background:#f5f9ff!important;
+    box-shadow:0 0 0 3px rgba(0,113,227,.10)!important;
+}
+
+body.premium-mode .slim-note{
+    background:#f5f5f7!important;
+    color:#424245!important;
+    border:1px solid rgba(0,0,0,.08)!important;
+}
+
+body.premium-mode .cam-block,
+body.premium-mode .card:not(.control-card):not(.order-tracking-card),
+body.premium-mode .summary-box,
+body.premium-mode .order-tracking-card,
+body.premium-mode .tracking-status-card{
+    border-color:rgba(0,0,0,.08)!important;
+    background:#ffffff!important;
+    box-shadow:0 18px 46px rgba(0,0,0,.06)!important;
+}
+
+body.premium-mode .container > .btn-main[onclick="calculateAll()"],
+body.premium-mode .btn-main{
+    background:#1d1d1f!important;
+    color:#ffffff!important;
+    border-color:#1d1d1f!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .container > .btn-main[onclick="calculateAll()"]:hover,
+body.premium-mode .btn-main:hover{
+    background:#000000!important;
+}
+
+body.premium-mode .btn-light{
+    background:#ffffff!important;
+    color:#1d1d1f!important;
+    border-color:rgba(0,0,0,.12)!important;
+}
+
+body.premium-mode .premium-benefit,
+body.premium-mode .premium-stat{
+    border-color:rgba(0,0,0,.08)!important;
+    background:#ffffff!important;
+    box-shadow:0 12px 32px rgba(0,0,0,.045)!important;
+}
+
+body.premium-mode .premium-benefit span{
+    color:#1d1d1f!important;
+    border-color:#d2d2d7!important;
+    background:#f5f5f7!important;
+}
+
+body.premium-mode .premium-benefit strong,
+body.premium-mode .premium-stat strong{
+    color:#1d1d1f!important;
+    font-weight:720!important;
+}
+
+body.premium-mode .premium-stat strong{
+    font-size:18px!important;
+}
+
+body.premium-mode .price-row.grand{
+    background:#1d1d1f!important;
+}
+
+@media(max-width:1180px){
+    body.premium-mode .header{
+        background:
+            linear-gradient(90deg, rgba(245,245,247,.99) 0%, rgba(245,245,247,.92) 48%, rgba(245,245,247,.42) 100%),
+            url("./plisegörsel1.png") center right/cover no-repeat!important;
+    }
+}
+
+@media(max-width:760px){
+    body.premium-mode .top-actions{
+        position:fixed!important;
+        min-height:68px!important;
+        padding:8px 14px!important;
+    }
+
+    body.premium-mode .header{
+        min-height:690px!important;
+        padding:96px 20px 152px!important;
+        background:
+            linear-gradient(180deg, rgba(245,245,247,.99) 0%, rgba(245,245,247,.94) 44%, rgba(245,245,247,.50) 100%),
+            url("./plisegörsel1.png") center/cover no-repeat!important;
+    }
+
+    body.premium-mode .premium-hero-copy h2{
+        font-size:48px!important;
+        letter-spacing:-1.6px!important;
+    }
+
+    body.premium-mode .premium-hero-copy p:last-child{
+        font-size:16px!important;
+    }
+
+    body.premium-mode .control-card{
+        margin-top:-88px!important;
+    }
+}
+
+/* PREMIUM MOD V5 - oran, okunaklilik ve renk duzeltmeleri */
+body.premium-mode,
+body.dark.premium-mode{
+    --accent:#1d1d1f;
+    --accent-dark:#000000;
+    --accent-soft:#f5f5f7;
+    --premium-line:#d8d8de;
+    --premium-muted:#6e6e73;
+    --premium-green:#2f6f4f;
+}
+
+body.premium-mode input[type="radio"],
+body.premium-mode input[type="checkbox"]{
+    accent-color:#1d1d1f!important;
+}
+
+body.premium-mode .header,
+body.dark.premium-mode .header{
+    min-height:690px!important;
+    background:
+        linear-gradient(90deg, rgba(245,245,247,.99) 0%, rgba(245,245,247,.93) 31%, rgba(245,245,247,.60) 55%, rgba(245,245,247,.10) 82%),
+        url("./plisegörsel1.png") center right/cover no-repeat!important;
+}
+
+body.premium-mode .premium-hero-copy{
+    width:min(540px, 48vw)!important;
+}
+
+body.premium-mode .premium-hero-copy .premium-eyebrow{
+    color:#4f4f54!important;
+    font-size:18px!important;
+    line-height:1.35!important;
+}
+
+body.premium-mode .premium-hero-copy h2{
+    font-size:clamp(50px, 5.1vw, 78px)!important;
+    line-height:1!important;
+    letter-spacing:-2px!important;
+}
+
+body.premium-mode .premium-hero-copy p:last-child{
+    max-width:440px!important;
+    color:#2f3034!important;
+}
+
+body.premium-mode .selection-option:has(input:checked),
+body.premium-mode .system-mode-option:has(input:checked),
+body.premium-mode .product-choice.active,
+body.premium-mode .choice.active{
+    border-color:#1d1d1f!important;
+    background:#f7f7f8!important;
+    box-shadow:0 0 0 2px rgba(29,29,31,.08)!important;
+}
+
+body.premium-mode .selection-title:before,
+body.premium-mode .section-title:before{
+    color:#1d1d1f!important;
+    border-color:#b8b8bf!important;
+}
+
+body.premium-mode .summary-pill{
+    color:#1d1d1f!important;
+    background:#f5f5f7!important;
+    border-color:#d8d8de!important;
+}
+
+body.premium-mode .price-row.grand,
+body.premium-mode .summary-box .price-row.grand{
+    background:#1d1d1f!important;
+    border:0!important;
+    color:#ffffff!important;
+    box-shadow:none!important;
+}
+
+body.premium-mode .price-row.grand *,
+body.premium-mode .summary-box .price-row.grand *{
+    color:#ffffff!important;
+}
+
+body.premium-mode .premium-benefits{
+    grid-template-columns:repeat(3, minmax(0, 1fr))!important;
+    gap:16px!important;
+    margin-top:28px!important;
+}
+
+body.premium-mode .premium-benefit{
+    min-height:126px!important;
+    padding:24px 24px!important;
+    border-color:#dedee3!important;
+    box-shadow:0 14px 34px rgba(0,0,0,.045)!important;
+}
+
+body.premium-mode .premium-benefit span{
+    width:40px!important;
+    height:40px!important;
+    color:#1d1d1f!important;
+    background:#f5f5f7!important;
+    border-color:#d8d8de!important;
+}
+
+body.premium-mode .premium-benefit strong{
+    font-size:17px!important;
+    letter-spacing:-.15px!important;
+}
+
+body.premium-mode .premium-benefit small{
+    color:#6e6e73!important;
+    font-size:13px!important;
+    line-height:1.5!important;
+}
+
+body.premium-mode .premium-stats{
+    grid-template-columns:repeat(4, minmax(0, 1fr))!important;
+    gap:14px!important;
+    margin-top:14px!important;
+}
+
+body.premium-mode .premium-stat{
+    display:grid!important;
+    grid-template-columns:auto 1fr!important;
+    align-items:center!important;
+    gap:4px 12px!important;
+    min-height:96px!important;
+    padding:20px 22px!important;
+    border-color:#dedee3!important;
+    background:#ffffff!important;
+    box-shadow:0 12px 30px rgba(0,0,0,.04)!important;
+}
+
+body.premium-mode .premium-stat-icon{
+    grid-row:1 / span 2!important;
+    width:34px!important;
+    height:34px!important;
+    border-radius:50%!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    color:#2f6f4f!important;
+    background:#eef6ef!important;
+    border:1px solid #dcebdd!important;
+    font-size:15px!important;
+    font-weight:800!important;
+}
+
+body.premium-mode .premium-stat strong{
+    margin:0!important;
+    color:#1d1d1f!important;
+    font-size:14px!important;
+    line-height:1.25!important;
+    letter-spacing:-.1px!important;
+}
+
+body.premium-mode .premium-stat small{
+    color:#6e6e73!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+}
+
+body.premium-mode .social-item .phone-icon-link{
+    width:32px!important;
+    height:32px!important;
+    border-radius:50%!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    flex:0 0 auto!important;
+    color:#2f6f4f!important;
+    background:#eef6ef!important;
+    border:1px solid #dcebdd!important;
+    text-decoration:none!important;
+    font-size:15px!important;
+    font-weight:800!important;
+}
+
+body.premium-mode .social-item .phone-icon-link svg{
+    width:16px!important;
+    height:16px!important;
+    display:block!important;
+}
+
+body.premium-mode .social-item .phone-icon-link + a{
+    line-height:1.3!important;
+}
+
+@media(max-width:1180px){
+    body.premium-mode .premium-benefits,
+    body.premium-mode .premium-stats{
+        grid-template-columns:repeat(2, minmax(0, 1fr))!important;
+    }
+
+    body.premium-mode .header{
+        min-height:640px!important;
+        background:
+            linear-gradient(90deg, rgba(245,245,247,.99) 0%, rgba(245,245,247,.94) 47%, rgba(245,245,247,.38) 100%),
+            url("./plisegörsel1.png") center right/cover no-repeat!important;
+    }
+}
+
+@media(max-width:760px){
+    body.premium-mode .premium-benefits,
+    body.premium-mode .premium-stats{
+        grid-template-columns:1fr!important;
+    }
+
+    body.premium-mode .premium-hero-copy{
+        width:100%!important;
+    }
+
+    body.premium-mode .premium-hero-copy h2{
+        font-size:44px!important;
+    }
 }
 </style>
+
 </head>
 
 <body>
@@ -2048,12 +4731,33 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
 
     <div class="header">
         <div class="top-actions">
-            <button type="button" class="top-small-btn measure-toggle" onclick="openMeasureMenu()">📏 Ölçü Nasıl Alınır?</button>
-            <button type="button" class="top-small-btn theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙 Koyu Mod</button>
+            <div class="premium-nav-brand" aria-hidden="true">
+                <img src="logo.png" alt="">
+                <div>
+                    <strong>Prestij Life</strong>
+                    <span>Plise Perde Sistemleri</span>
+                </div>
+            </div>
+            <nav class="premium-nav-links" aria-label="Premium menü">
+                <a href="#quoteSection">Fiyat Teklifi</a>
+                <a href="#orderTrackingSection">Sipariş Takip</a>
+                <a href="#" onclick="openFabricCatalogMenu(); return false;">Kumaşlar</a>
+                <a href="#" onclick="openCaseCatalogMenu(); return false;">Kasalar</a>
+                <a href="tel:+905053559532">İletişim</a>
+            </nav>
+            <button type="button" class="top-small-btn measure-toggle" onclick="openMeasureMenu()">Ölçü Nasıl Alınır?</button>
+            <button type="button" class="top-small-btn view-mode-btn" id="viewModeToggle" onclick="toggleViewMode()">Premium Mod</button>
+            <button type="button" class="top-small-btn theme-toggle" id="themeToggle" onclick="toggleTheme()">Koyu Mod</button>
         </div>
 
         <div class="logo-shell">
             <img src="logo.png" alt="Prestij Life Logo">
+        </div>
+
+        <div class="premium-hero-copy">
+            <p class="premium-eyebrow">Zarafeti ölçüye göre tasarlıyoruz.</p>
+            <h2>Plise Perde Fiyat Teklifi</h2>
+            <p>Mekanınıza en uygun plise perdeyi seçin, ölçülerinizi girin ve size özel fiyat teklifinizi anında alın.</p>
         </div>
 
         <h1>Prestij Life</h1>
@@ -2063,22 +4767,33 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
         </p>
 
         <div class="hero-badges">
-            <span class="badge">✓ Cam Balkon Uyumlu</span>
-            <span class="badge">✓ Pimapen Uyumlu</span>
-            <span class="badge">✓ Anında Fiyat Hesabı</span>
+            <span class="badge">Cam Balkon Uyumlu</span>
+            <span class="badge">Pimapen Uyumlu</span>
+            <span class="badge">Anında Fiyat Hesabı</span>
+        </div>
+
+        <div class="premium-hero-actions">
+            <button type="button" class="btn-main" onclick="document.getElementById('quoteSection').scrollIntoView({behavior:'smooth', block:'start'})">Fiyat Teklifi Al</button>
+            <button type="button" class="btn-light" onclick="document.getElementById('orderTrackingSection').scrollIntoView({behavior:'smooth', block:'start'})">Sipariş Takip</button>
+        </div>
+
+        <div class="premium-hero-trust">
+            <div><strong>Ölçüye Özel</strong><span>Her ölçü için ayrı fiyat ve ürün seçimi.</span></div>
+            <div><strong>Hızlı Teklif</strong><span>Ürün, kumaş ve kasa seçimine göre anlık hesaplama.</span></div>
+            <div><strong>Güvenli Sipariş</strong><span>Takip numarasıyla sipariş süreci sorgulanabilir.</span></div>
         </div>
 
         <div class="price-status">
             <span class="status-dot" id="priceStatusDot"></span>
-            <span id="priceStatusText">Güncel fiyatlar yükleniyor...</span>
+            <span id="priceStatusText">Fiyatlar yükleniyor...</span>
         </div>
     </div>
 
-    <div class="card control-card">
+    <div class="card control-card" id="quoteSection">
         <h2>Ölçü ve Ürün Bilgileri</h2>
 
         <label class="field" for="camCount">
-            <span>Kaç Farklı Ölçü Gireceksiniz?</span>
+            <span>Kaç Farklı Ölçü Gireceksiniz</span>
             <select id="camCount"></select>
         </label>
 
@@ -2189,6 +4904,7 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
         <div class="grid">
             <input id="name" placeholder="Ad Soyad">
             <input id="phone" inputmode="tel" placeholder="Telefon No">
+            <input id="email" type="email" placeholder="E-posta (isteğe bağlı)">
         </div>
         <textarea id="address" placeholder="Adres"></textarea>
     </div>
@@ -2196,6 +4912,19 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
     <button class="btn-main" onclick="calculateAll()">Fiyat Teklifi Hazırla</button>
 
     <div class="result" id="result"></div>
+
+    <section class="premium-benefits" aria-label="Prestij Life avantajları">
+        <div class="premium-benefit"><span>01</span><strong>Net Fiyat</strong><small>Ölçü ve ürün seçimine göre anında teklif.</small></div>
+        <div class="premium-benefit"><span>02</span><strong>Ölçüye Özel</strong><small>Her sipariş verilen ölçülere göre hazırlanır.</small></div>
+        <div class="premium-benefit"><span>03</span><strong>Kumaş Seçimi</strong><small>Farklı seri ve renk seçenekleriyle teklif alın.</small></div>
+    </section>
+
+    <section class="premium-stats" aria-label="Prestij Life güven bilgileri">
+        <div class="premium-stat"><span class="premium-stat-icon" aria-hidden="true">01</span><strong>2 Yıl Üretim Garantisi</strong><small>Ürünleriniz garanti kapsamında hazırlanır.</small></div>
+        <div class="premium-stat"><span class="premium-stat-icon" aria-hidden="true">02</span><strong>7-10 Gün İçinde</strong><small>Ölçüye özel imalat ve teslimat planlanır.</small></div>
+        <div class="premium-stat"><span class="premium-stat-icon" aria-hidden="true">03</span><strong>Türkiye’nin Her Yerine</strong><small>Kargo seçeneğiyle gönderim yapılır.</small></div>
+        <div class="premium-stat"><span class="premium-stat-icon" aria-hidden="true">04</span><strong>Ölçüye Özel Üretim</strong><small>Sipariş ölçülerinize göre hazırlanır.</small></div>
+    </section>
 
 
     <div class="card order-tracking-card" id="orderTrackingSection">
@@ -2216,7 +4945,7 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
         </div>
 
         <div class="tracking-mini-help">
-            <span>🔎</span>
+            <span>Takip</span>
             <div><strong>Sipariş kodunuzu kaybettiyseniz</strong><br>WhatsApp üzerinden ad soyad ve telefon numaranızı göndererek sipariş kodunuzu öğrenebilirsiniz.</div>
         </div>
 
@@ -2250,13 +4979,17 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
         </div>
 
         <div class="social-item">
-            <a href="tel:+905327881099">📞</a>
+            <a class="phone-icon-link" href="tel:+905327881099" aria-label="Telefon">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.3-.3.74-.4 1.13-.27 1.24.41 2.57.63 3.95.63.61 0 1.11.5 1.11 1.11v3.49c0 .61-.5 1.11-1.11 1.11C10.66 21.75 2.25 13.34 2.25 3.51c0-.61.5-1.11 1.11-1.11h3.5c.61 0 1.11.5 1.11 1.11 0 1.38.22 2.71.63 3.95.12.39.03.82-.27 1.13l-2.21 2.2z"/>
+                </svg>
+            </a>
             <a href="tel:+905327881099">Toptan Satışlar İçin Arama: 0 532 788 10 99</a>
         </div>
 
         <div class="note">
             Daha fazla bilgi veya soru sormak için bizimle iletişime geçebilirsiniz.<br>
-            <a class="call-link" href="tel:+905053559532">📞 +90 505 355 95 32</a>
+            <a class="call-link" href="tel:+905053559532">Telefon: +90 505 355 95 32</a>
         </div>
     </div>
 
@@ -2275,7 +5008,7 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
                 <h2>Güncel m² Fiyatları</h2>
                 <p>Fiyatlar 1 m² üzerinden hesaplanır. Ölçünüze göre toplam tutar otomatik hazırlanır.</p>
             </div>
-            <button type="button" class="price-list-close" onclick="closeCustomerPriceList()">×</button>
+            <button type="button" class="price-list-close" onclick="closeCustomerPriceList()">&times;</button>
         </div>
 
         <div class="price-list-table" id="customerPriceListRows"></div>
@@ -2297,21 +5030,17 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
             <div>
                 <span class="eyebrow">Siparişiniz Alındı</span>
                 <h2>Sipariş Takip Bilgisi</h2>
-                <p>Siparişinizi aşağıdaki takip numarası ile sorgulayabilirsiniz.</p>
+                <p>Siparişiniz alınmıştır. Sipariş onayı için sizi en kısa sürede arayacağız.</p>
             </div>
-            <button type="button" class="modal-x" onclick="closeOrderSuccessModal()">×</button>
+            <button type="button" class="modal-x" onclick="closeOrderSuccessModal()">&times;</button>
         </div>
 
         <div class="tracking-number-box">
             <span class="tracking-number-label">Sipariş Takip Numaranız</span>
             <div class="tracking-number-row">
                 <strong class="tracking-number" id="successOrderCode">-</strong>
-                <button type="button" class="copy-code-btn" onclick="copyTrackingCode()" title="Takip numarasını kopyala">📋</button>
+                <button type="button" class="copy-code-btn" onclick="copyTrackingCode()" title="Takip numarasını kopyala"></button>
             </div>
-        </div>
-
-        <div class="order-warning">
-            <b>Önemli:</b> Sipariş numaranızı kaybetmeyin. Üretim, hazırlık ve teslimat durumunu bu numara ile takip edebilirsiniz.
         </div>
 
         <div class="modal-summary" id="successOrderSummary"></div>
@@ -2323,7 +5052,6 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
 
         <div class="order-success-help">
             <button type="button" class="btn-light" onclick="openOrderWhatsAppSupport()">WhatsApp ile Bilgi Al</button>
-            <button type="button" class="btn-light" onclick="openLostOrderCodeWhatsApp()">Takip Numaramı Kaybettim</button>
         </div>
 
         <div class="copy-status" id="successCopyStatus"></div>
@@ -2334,7 +5062,7 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
     <div class="modal-content">
         <div class="modal-head">
             <h3 id="modalTitle">Görsel</h3>
-            <button type="button" class="modal-close" onclick="closeImageModal()">×</button>
+            <button type="button" class="modal-close" onclick="closeImageModal()">&times;</button>
         </div>
         <div class="modal-options" id="modalOptions"></div>
         <div class="modal-image-wrap" id="modalImageWrap">
@@ -2343,8 +5071,14 @@ button,.btn-main,.btn-light{min-height:42px!important;border-radius:12px!importa
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const PRICE_API_URL = "https://script.google.com/macros/s/AKfycbzcTBOxRGOsFO0dzLS1EKrWMtn0GgxjHI-dUonwg-qehva7MSIry8w0K8Y_63voFcAz/exec";
+const PRICE_API_URL = "";
+const SUPABASE_URL = "https://dodjdnwsxvylhoondzud.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_PdxWt7kuDgFNZRQbLcT9vg_px468J0d";
+const USE_SUPABASE_PUBLIC = true;
+const USE_APPS_SCRIPT_FALLBACK = false;
+const supabaseClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
 let currentPrices = null;
 let priceReady = false;
@@ -2353,6 +5087,7 @@ let priceLoadFailed = false;
 
 const MAX_CAM = 50;
 const ORDER_STORAGE_KEY = "prestijLifeOrderData_v8";
+const VIEW_MODE_KEY = "prestijLifeViewMode";
 const NOT_SELECTED = "Belirtilmedi";
 
 const DEFAULT_PRODUCT_TYPES = [
@@ -2378,7 +5113,7 @@ const kasaRenkleri = [
 
 const kasaTipleri = [
     { name:"Kasa", file:"kasa.png" },
-    { name:"Slim Kasa", file:"slimkasa.png" }
+    { name:"Slim Kasa", file:"" }
 ];
 
 const klasikKumaslar = [
@@ -2419,8 +5154,232 @@ let selectionMode = "same";
 let globalProductType = "";
 let systemMode = "individual";
 
+function hasSupabase(){
+    return USE_SUPABASE_PUBLIC && !!supabaseClient;
+}
+
+function normalizeSupabaseError(error, fallbackMessage){
+    if(!error) return new Error(fallbackMessage || "Supabase işlemi başarısız.");
+    return new Error(error.message || fallbackMessage || "Supabase işlemi başarısız.");
+}
+
+async function loadPricesFromSupabase(){
+    if(!hasSupabase()) throw new Error("Supabase bağlantısı hazır değil.");
+
+    const response = await supabaseClient
+        .from("prices")
+        .select("key,value")
+        .order("sort_order", { ascending:true });
+
+    if(response.error) throw normalizeSupabaseError(response.error, "Fiyatlar alınamadı.");
+
+    const prices = {};
+    (response.data || []).forEach(function(row){
+        prices[row.key] = Number(row.value);
+    });
+
+    return validatePrices(prices);
+}
+
+async function loadCatalogDataFromSupabase(){
+    if(!hasSupabase()) throw new Error("Supabase bağlantısı hazır değil.");
+
+    const productsResponse = await supabaseClient
+        .from("products")
+        .select("urun_id,urun_adi,product_key,durum,katalog_dosya,note")
+        .order("urun_id", { ascending:true });
+
+    if(productsResponse.error) throw normalizeSupabaseError(productsResponse.error, "ürünler alınamadı.");
+
+    const catalogsResponse = await supabaseClient
+        .from("catalogs")
+        .select("katalog_id,urun_id,urun_adi,dosya_adi,gorsel_url,storage_path,durum,note")
+        .order("katalog_id", { ascending:true });
+
+    if(catalogsResponse.error) throw normalizeSupabaseError(catalogsResponse.error, "Kataloglar alınamadı.");
+
+    return {
+        success:true,
+        products:(productsResponse.data || []).map(function(row){
+            return {
+                urun_id: row.urun_id,
+                urun_adi: row.urun_adi,
+                product_key: row.product_key,
+                durum: row.durum,
+                katalog_dosya: row.katalog_dosya,
+                not: row.note || ""
+            };
+        }),
+        catalogs:(catalogsResponse.data || []).map(function(row){
+            return {
+                katalog_id: row.katalog_id,
+                urun_id: row.urun_id,
+                urun_adi: row.urun_adi,
+                dosya_adi: row.dosya_adi,
+                gorsel_url: row.gorsel_url,
+                storage_path: row.storage_path,
+                durum: row.durum,
+                not: row.note || ""
+            };
+        }),
+        fabrics:[]
+    };
+}
+
+function createOrderCode(){
+    const now = new Date();
+    const datePart = [
+        now.getFullYear(),
+        String(now.getMonth() + 1).padStart(2, "0"),
+        String(now.getDate()).padStart(2, "0")
+    ].join("");
+    const randomPart = Math.random().toString(36).slice(2, 6).toUpperCase();
+    return "PL-" + datePart + "-" + randomPart;
+}
+
+function normalizeOptionalEmail(value){
+    const email = String(value || "").trim().toLowerCase();
+    if(!email) return "";
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : "";
+}
+
+function supabaseOrderRow(payload){
+    const items = Array.isArray(payload.items) ? payload.items : [];
+    const totalAdet = items.reduce(function(sum,item){ return sum + Number(item.adet || 0); }, 0);
+    const totalRealM2 = items.reduce(function(sum,item){
+        return sum + ((Number(item.gercek_en || 0) * Number(item.gercek_boy || 0) * Number(item.adet || 0)) / 10000);
+    }, 0);
+    const totalAmount = Number(payload.totalAmount || 0);
+    const orderCode = payload.siparis_kodu || createOrderCode();
+
+    return {
+        siparis_kodu: orderCode,
+        kaynak: "site",
+        musteri_ad: payload.customer.name,
+        telefon: payload.customer.phone,
+        adres: payload.customer.address,
+        toplam_adet: totalAdet,
+        toplam_gercek_m2: Number(totalRealM2.toFixed(2)),
+        musteri_toplam_tutar: totalAmount,
+        formul_toplam_tutar: totalAmount,
+        satis_duzeltme_tutari: 0,
+        satici_hesap_tutar: totalAmount,
+        fark_tutar: 0,
+        durum: "Yeni",
+        hesap_durumu: "açık",
+        note: payload.note || ""
+    };
+}
+
+function supabaseOrderDetailRows(payload, orderCode){
+    return (payload.items || []).map(function(item, index){
+        const realM2 = (Number(item.gercek_en || 0) * Number(item.gercek_boy || 0) * Number(item.adet || 0)) / 10000;
+        const lineTotal = Number(item.satir_tutar || item.lineTotal || 0);
+        return {
+            siparis_kodu: orderCode,
+            satir_no: index + 1,
+            urun: item.urun || item.productLabel || "",
+            product_key: item.productKey || "",
+            uygulama_yeri: item.uygulama_yeri || "",
+            montaj_tipi: item.montaj_tipi || "",
+            kasa_tipi: item.kasa_tipi || "Kasa",
+            kasa_rengi: item.kasa_rengi || "",
+            kasa_rengi_raw: item.kasa_rengi_raw || "",
+            kumas: item.kumas || "",
+            blackout_kumas: item.blackout_kumas || "",
+            tul_kumas: item.tul_kumas || "",
+            perde_kumas: item.perde_kumas || "",
+            gercek_en: Number(item.gercek_en || 0),
+            gercek_boy: Number(item.gercek_boy || 0),
+            hesap_en: Number(item.hesap_en || 0),
+            hesap_boy: Number(item.hesap_boy || 0),
+            adet: Number(item.adet || 0),
+            acilir_adet: Number(item.acilir_adet || 0),
+            gercek_m2: Number(realM2.toFixed(2)),
+            satis_m2: Number(item.satis_m2 || 0),
+            birim_fiyat: Number(item.birim_fiyat || 0),
+            satir_tutar: lineTotal,
+            satici_m2_fiyat: 0,
+            satici_satir_tutar: 0,
+            bolge_kodu: ""
+        };
+    });
+}
+
+async function createOrderInSupabase(payload){
+    if(!hasSupabase()) throw new Error("Supabase bağlantısı hazır değil.");
+    if(!payload || !payload.customer || !payload.items || !payload.items.length){
+        throw new Error("Sipariş verisi eksik.");
+    }
+
+    const order = supabaseOrderRow(payload);
+    const details = supabaseOrderDetailRows(payload, order.siparis_kodu);
+
+    const rpcOrderPayload = payload.customer && payload.customer.email
+        ? Object.assign({}, order, { musteri_email: normalizeOptionalEmail(payload.customer.email) })
+        : order;
+
+    const rpcResponse = await supabaseClient.rpc("create_site_order", {
+        order_payload: rpcOrderPayload,
+        detail_payload: details
+    });
+    if(!rpcResponse.error){
+        return {
+            success:true,
+            orderCode: order.siparis_kodu,
+            order: order,
+            details: details
+        };
+    }
+    const rpcMessage = String(rpcResponse.error.message || "").toLowerCase();
+    if(!rpcMessage.includes("create_site_order")){
+        throw normalizeSupabaseError(rpcResponse.error, "Sipariş kaydedilemedi.");
+    }
+
+    const orderResponse = await supabaseClient.from("orders").insert(order).select("*").single();
+    if(orderResponse.error) throw normalizeSupabaseError(orderResponse.error, "Sipariş kaydedilemedi.");
+
+    const detailResponse = await supabaseClient.from("order_details").insert(details);
+    if(detailResponse.error) throw normalizeSupabaseError(detailResponse.error, "Sipariş detayları kaydedilemedi.");
+
+    return {
+        success:true,
+        orderCode: order.siparis_kodu,
+        order: orderResponse.data || order,
+        details: details
+    };
+}
+
+async function sendOrderEmailNotification(orderCode, payload){
+    const email = normalizeOptionalEmail(payload && payload.customer && payload.customer.email);
+    if(!orderCode || !email || !hasSupabase() || !supabaseClient.functions || !supabaseClient.functions.invoke){
+        return { skipped:true };
+    }
+
+    try{
+        const response = await supabaseClient.functions.invoke("send-order-email", {
+            body:{ orderCode:orderCode }
+        });
+        if(response.error) throw response.error;
+        return response.data || { success:true };
+    }catch(error){
+        console.warn("Sipariş e-postası gönderilemedi:", error);
+        return { success:false, error:error && error.message ? error.message : String(error) };
+    }
+}
+
+async function getPublicOrderStatusFromSupabase(code){
+    if(!hasSupabase()) throw new Error("Supabase bağlantısı hazır değil.");
+
+    const response = await supabaseClient.rpc("get_public_order_status", { order_code: code });
+    if(response.error) throw normalizeSupabaseError(response.error, "Sipariş sorgulanamadı.");
+    if(!response.data || !response.data.success) throw new Error((response.data && response.data.message) || "Sipariş bulunamadı.");
+    return response.data;
+}
+
 async function init(){
     initTheme();
+    initViewMode();
     await loadCurrentPrices();
     await loadCatalogData();
 
@@ -2448,10 +5407,10 @@ async function init(){
 }
 
 async function loadCurrentPrices(){
-    setPriceStatus("loading", "Güncel fiyatlar yükleniyor...");
+    setPriceStatus("loading", "");
 
     try{
-        const response = await fetch(PRICE_API_URL + "?t=" + Date.now(), {
+        const response = await fetch(PRICE_API_URL + "t=" + Date.now(), {
             method:"GET",
             cache:"no-store"
         });
@@ -2466,13 +5425,13 @@ async function loadCurrentPrices(){
         priceReady = true;
         priceLoadedFromApi = true;
         priceLoadFailed = false;
-        setPriceStatus("ok", "Güncel fiyatlar yüklendi.");
+        setPriceStatus("ok", "G\u00fcncel fiyatlar y\u00fcklendi.");
     }catch(error){
         currentPrices = null;
         priceReady = false;
         priceLoadedFromApi = false;
         priceLoadFailed = true;
-        setPriceStatus("fail", "Güncel fiyat bilgisi alınamadı.");
+        setPriceStatus("fail", "Güncel fiyat bilgisi alınamadı. Lütfen sayfayı yenileyin veya WhatsApp üzerinden bizimle iletişime geçin.");
     }
 }
 
@@ -2507,12 +5466,19 @@ function validatePrices(prices){
 function setPriceStatus(type, text){
     const dot = document.getElementById("priceStatusDot");
     const label = document.getElementById("priceStatusText");
+    const wrap = label ? label.closest(".price-status") : null;
 
-    dot.classList.remove("ok", "fail");
-    if(type === "ok") dot.classList.add("ok");
-    if(type === "fail") dot.classList.add("fail");
+    if(wrap){
+        wrap.style.display = type === "fail" ? "inline-flex" : "none";
+    }
 
-    label.textContent = text;
+    if(dot){
+        dot.classList.remove("ok", "fail");
+        if(type === "ok") dot.classList.add("ok");
+        if(type === "fail") dot.classList.add("fail");
+    }
+
+    if(label) label.textContent = text;
 }
 
 function initTheme(){
@@ -2523,16 +5489,47 @@ function initTheme(){
     updateThemeButton();
 }
 
+function initViewMode(){
+    const storedMode = localStorage.getItem(VIEW_MODE_KEY);
+    const savedMode = storedMode === "simple" ? "simple" : "premium";
+    applyViewMode(savedMode);
+}
+
+function toggleViewMode(){
+    const nextMode = document.body.classList.contains("premium-mode") ? "simple" : "premium";
+    applyViewMode(nextMode);
+}
+
+function applyViewMode(mode){
+    const isPremium = mode === "premium";
+    document.body.classList.toggle("premium-mode", isPremium);
+    document.body.classList.toggle("simple-mode", !isPremium);
+    localStorage.setItem(VIEW_MODE_KEY, isPremium ? "premium" : "simple");
+    updateViewModeButton();
+}
+
+function updateViewModeButton(){
+    const btn = document.getElementById("viewModeToggle");
+    if(!btn) return;
+    const isPremium = document.body.classList.contains("premium-mode");
+    btn.textContent = isPremium ? "Basit Mod" : "Premium Mod";
+    btn.title = isPremium ? "Basit görünüme geç" : "Premium görünüme geç";
+}
+
 function toggleTheme(){
     document.body.classList.toggle("dark");
     localStorage.setItem("prestijLifeTheme", document.body.classList.contains("dark") ? "dark" : "light");
     updateThemeButton();
+    updateViewModeButton();
 }
 
 function updateThemeButton(){
     const btn = document.getElementById("themeToggle");
     if(!btn) return;
-    btn.textContent = document.body.classList.contains("dark") ? "☀️ Açık Mod" : "🌙 Koyu Mod";
+    btn.style.display = "none";
+    btn.textContent = "";
+    const modeBtn = document.querySelector(".site-mode-btn");
+    if(modeBtn) modeBtn.title = document.body.classList.contains("dark") ? "Açık moda geç" : "Koyu moda geç";
 }
 
 async function loadCatalogData(){
@@ -2540,7 +5537,7 @@ async function loadCatalogData(){
     activeCatalogs = [];
 
     try{
-        const response = await fetch(PRICE_API_URL + "?action=listCatalogData&t=" + Date.now(), {
+        const response = await fetch(PRICE_API_URL + "action=listCatalogData&t=" + Date.now(), {
             method:"GET",
             cache:"no-store"
         });
@@ -2565,7 +5562,7 @@ async function loadCatalogData(){
         catalogDataLoaded = false;
         activeCatalogs = [];
         productTypes = DEFAULT_PRODUCT_TYPES.slice();
-        console.warn("Katalog ve ürün bilgileri alınamadı:", error);
+        console.warn("Katalog ve Ürün bilgileri alınamadı:", error);
     }
 }
 
@@ -2939,7 +5936,7 @@ function createCamCard(index){
         <div class="card cam-card" id="cam${index}" data-cam="${index}">
             <button type="button" class="cam-header" onclick="openCam(${index})">
                 <h2>${index}. Ölçü</h2>
-                <span class="cam-arrow">⌄</span>
+                <span class="cam-arrow">v</span>
             </button>
 
             <div class="cam-body">
@@ -3300,8 +6297,8 @@ function calculateAll(){
         if(!productKey) addCardError("Ürün tipi seçilmelidir.");
         if(!uygulama) addCardError("Uygulama alanı seçilmelidir.");
         if(!tip) addCardError("Sistem tipi seçilmelidir.");
-        if(isNaN(en) || en <= 0) addCardError("En ölçüsü zorunlu ve 0'dan büyük olmalıdır.");
-        if(isNaN(boy) || boy <= 0) addCardError("Boy ölçüsü zorunlu ve 0'dan büyük olmalıdır.");
+        if(isNaN(en) || en <= 0) addCardError("En Ölçüsü zorunlu ve 0'dan büyük olmalıdır.");
+        if(isNaN(boy) || boy <= 0) addCardError("Boy Ölçüsü zorunlu ve 0'dan büyük olmalıdır.");
         if(isNaN(adet) || adet <= 0 || !Number.isInteger(adet)) addCardError("Adet zorunlu, 0'dan büyük ve tam sayı olmalıdır.");
         if(acilirRaw !== "" && (isNaN(acilir) || acilir < 0 || !Number.isInteger(acilir))) addCardError("Açılır adet boş bırakılabilir veya 0 ve üzeri tam sayı olmalıdır.");
         if(!isNaN(adet) && !isNaN(acilir) && acilir > adet) addCardError("Açılır adet, toplam adetten büyük olamaz.");
@@ -3352,13 +6349,14 @@ function calculateAll(){
             tul: colors.tul,
             perde: colors.perde,
             tul_perde: colors.tul_perde,
-            dimension: formatNumber(en) + " × " + formatNumber(boy) + " cm",
+            dimension: formatNumber(en) + " x " + formatNumber(boy) + " cm",
             whatsappDimension: formatNumber(en) + "x" + formatNumber(boy) + " cm"
         });
     });
 
     const ad = document.getElementById("name").value.trim();
     const phoneRaw = document.getElementById("phone").value.trim();
+    const email = normalizeOptionalEmail((document.getElementById("email") || {}).value || "");
     const adr = document.getElementById("address").value.trim();
     const phoneData = normalizePhone(phoneRaw);
 
@@ -3367,7 +6365,7 @@ function calculateAll(){
     }
 
     if(items.length === 0 && errors.length === 0){
-        errors.push("En az 1 geçerli ölçü bilgisi girilmelidir.");
+        errors.push("En az 1 geçerli Ölçü bilgisi girilmelidir.");
     }
 
     if(errors.length > 0){
@@ -3375,7 +6373,7 @@ function calculateAll(){
         if(firstInvalidCam !== null){
             openCam(firstInvalidCam);
             const invalidCard = document.getElementById("cam" + firstInvalidCam);
-            invalidCard?.scrollIntoView({ behavior:"smooth", block:"center" });
+            invalidCard.scrollIntoView({ behavior:"smooth", block:"center" });
         }else{
             document.getElementById("result").scrollIntoView({ behavior:"smooth", block:"start" });
         }
@@ -3404,7 +6402,7 @@ function calculateAll(){
         warningHTML += `
             <div class="warning-box">
                 <b>Renk seçimi eksik.</b>
-                Sadece fiyat almak için bu şekilde devam edebilirsiniz. Sipariş vermek isterseniz kasa ve ürün renk seçimlerini tamamlamanız önerilir.
+                Sadece fiyat almak için bu şekilde devam edebilirsiniz. Sipariş vermek isterseniz kasa ve Ürün renk seçimlerini tamamlamanız önerilir.
             </div>
         `;
     }
@@ -3430,7 +6428,7 @@ function calculateAll(){
                     <span class="system-chip">${escapeHTML(item.tipText)}</span>
                 </div>
                 <b class="dimension">${escapeHTML(item.dimension)}</b>
-                <div class="order-line">${item.adet} adet · ${escapeHTML(item.productLabel)}</div>
+                <div class="order-line">${item.adet} adet - ${escapeHTML(item.productLabel)}</div>
 
                 <div class="order-meta">
                     <span>Sistem</span>
@@ -3502,7 +6500,7 @@ function calculateAll(){
 
     const whatsappLink = "https://wa.me/905053559532?text=" + encodeURIComponent(lastOrderText);
 
-    lastCalculatedOrderData = buildSiteOrderPayload(items, ad, tel, adr);
+    lastCalculatedOrderData = buildSiteOrderPayload(items, ad, tel, adr, (document.getElementById("email") || {}).value || "");
 
     const resultHTML = `
         <div class="summary-card">
@@ -3686,13 +6684,14 @@ function showPriceUnavailable(){
     `;
 }
 
-function buildSiteOrderPayload(items, ad, tel, adr){
+function buildSiteOrderPayload(items, ad, tel, adr, email){
     return {
         action: "createOrder",
         customer:{
             name: ad,
             phone: tel,
-            address: adr
+            address: adr,
+            email: normalizeOptionalEmail(email)
         },
         items: items.map(function(item){
             return {
@@ -3756,10 +6755,16 @@ async function submitSiteOrder(){
         return;
     }
 
+    if((document.getElementById("email") || {}).value && !email){
+        alert("E-posta adresi geçerli değil. E-posta zorunlu değildir; boş bırakabilir veya doğru formatta yazabilirsiniz.");
+        return;
+    }
+
     lastCalculatedOrderData.customer = {
         name: ad,
         phone: phoneData.value,
-        address: adr
+        address: adr,
+        email: email
     };
 
     if(orderPayloadHasMissingColor(lastCalculatedOrderData)){
@@ -3771,10 +6776,10 @@ async function submitSiteOrder(){
     orderSubmitInProgress = true;
 
     button.disabled = true;
-    button.textContent = "Sipariş kaydediliyor...";
+    button.textContent = "Kaydediliyor...";
 
     const status = document.getElementById("orderSaveStatus");
-    if(status) status.textContent = "Siparişiniz kaydediliyor...";
+    if(status) status.textContent = "";
 
     try{
         const response = await fetch(PRICE_API_URL, {
@@ -3791,14 +6796,13 @@ async function submitSiteOrder(){
         const orderCode = getOrderCodeFromResponse(data);
 
         if(status){
-            status.innerHTML = orderCode
-                ? `Siparişiniz alındı. Takip numaranız: <b>${escapeHTML(orderCode)}</b>`
-                : "Siparişiniz alındı. En kısa sürede sizinle iletişime geçeceğiz.";
+            status.textContent = "Siparişiniz alınmıştır. Sipariş onayı için sizi en kısa sürede arayacağız.";
         }
 
         button.textContent = "Sipariş Alındı";
 
         if(orderCode){
+            sendOrderEmailNotification(orderCode, lastCalculatedOrderData);
             showOrderSuccessModal(orderCode, data);
         }else{
             alert("Siparişiniz alındı. Sipariş takip numarası alınamadıysa WhatsApp üzerinden bizimle iletişime geçin.");
@@ -3844,7 +6848,7 @@ function renderCatalogTabButtons(){
         options.innerHTML = `
             <button type="button" class="measure-option-btn" id="selectedCatalogBtn">
                 <span class="measure-option-title">Seçili Ürün Kataloğu</span>
-                <span class="measure-option-small">Seçtiğiniz ürüne ait katalogları gösterir.</span>
+                <span class="measure-option-small">Seçtiğiniz Ürüne ait katalogları gösterir.</span>
             </button>
 
             <button type="button" class="measure-option-btn" id="allCatalogBtn">
@@ -3858,7 +6862,7 @@ function renderCatalogTabButtons(){
         options.innerHTML = `
             <button type="button" class="measure-option-btn" id="allCatalogBtn">
                 <span class="measure-option-title">Tüm Kataloglar</span>
-                <span class="measure-option-small">Henüz ürün seçilmediği için tüm kataloglar gösterilir.</span>
+                <span class="measure-option-small">Henüz Ürün seçilmediği için tüm kataloglar gösterilir.</span>
             </button>
 
             <div id="catalogListArea" style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:4px;"></div>
@@ -3874,9 +6878,9 @@ function renderCatalogTabButtons(){
             const selectedCatalogs = getCatalogsToShow("selected");
 
             if(selectedCatalogs.length){
-                renderCatalogButtons(selectedCatalogs, "Bu ürüne bağlı katalog bulunamadı.");
+                renderCatalogButtons(selectedCatalogs, "Bu Ürüne bağlı katalog bulunamadı.");
             }else{
-                renderCatalogButtons([], "Bu ürüne bağlı katalog bulunamadı. Tüm Kataloglar bölümünden diğer kataloglara bakabilirsiniz.");
+                renderCatalogButtons([], "Bu Ürüne bağlı katalog bulunamadı. Tüm Kataloglar bölümünden diğer kataloglara bakabilirsiniz.");
             }
         };
     }
@@ -3944,8 +6948,7 @@ function showCatalogImage(title, src){
 
 function getCaseCatalogs(){
     return [
-        { title:"Kasa Renkleri", desc:"Kasa renk seçeneklerini görüntüle", src:"kasa.png" },
-        { title:"Slim Kasa Seçenekleri", desc:"Slim kasa seçeneklerini görüntüle", src:"slimkasa.png" }
+        { title:"Kasa Renkleri", desc:"Kasa renk seçeneklerini görüntüle", src:"kasa.png" }
     ];
 }
 
@@ -4136,6 +7139,7 @@ function saveState(){
         customer:{
             name: document.getElementById("name").value,
             phone: document.getElementById("phone").value,
+            email: (document.getElementById("email") || {}).value || "",
             address: document.getElementById("address").value
         }
     };
@@ -4150,7 +7154,7 @@ function queueSaveState(){
 }
 
 function bindAutoSave(){
-    ["name", "phone", "address"].forEach(function(id){
+    ["name", "phone", "email", "address"].forEach(function(id){
         const element = document.getElementById(id);
         if(element){
             element.addEventListener("input", queueSaveState);
@@ -4182,6 +7186,7 @@ function restoreState(){
         if(state.customer){
             document.getElementById("name").value = state.customer.name || "";
             document.getElementById("phone").value = state.customer.phone || "";
+            if(document.getElementById("email")) document.getElementById("email").value = state.customer.email || "";
             document.getElementById("address").value = state.customer.address || "";
         }
 
@@ -4197,7 +7202,7 @@ function restoreState(){
 }
 
 function resetOrderForm(){
-    const confirmed = confirm("Girilen tüm ölçü ve seçimler temizlensin mi?");
+    const confirmed = confirm("Girilen tüm Ölçü ve seçimler temizlensin mi");
     if(!confirmed) return;
 
     localStorage.removeItem(ORDER_STORAGE_KEY);
@@ -4208,6 +7213,7 @@ function resetOrderForm(){
 
     document.getElementById("name").value = "";
     document.getElementById("phone").value = "";
+    if(document.getElementById("email")) document.getElementById("email").value = "";
     document.getElementById("address").value = "";
     document.getElementById("result").innerHTML = "";
 
@@ -4225,10 +7231,10 @@ window.addEventListener("keydown", function(event){
 });
 
 
-/* KATALOG MODALI - SON DÜZELTME
-   Ürün seçildiyse direkt seçili ürün kataloğunu açar.
+/* KATALOG MODALI - SON D?ZELTME
+   Ürün seçildiyse direkt seçili Ürün kataloğunu açar.
    Ürün seçilmediyse tüm katalogları listeler.
-   Kapatma alanı sabit kalır, görsel kendi alanında kayar.
+   Kapatma alanı sabit kal?r, görsel kendi alanında kayar.
 */
 (function(){
     const styleId = "prestij-catalog-modal-final-style";
@@ -4340,7 +7346,7 @@ window.addEventListener("keydown", function(event){
 
     function cardsHtml(list){
         if(!list.length){
-            return `<div class="catalog-empty">Bu ürün için katalog görseli şu anda görüntülenemiyor. Tüm kataloglara bakabilir veya WhatsApp üzerinden destek alabilirsiniz.</div>`;
+            return `<div class="catalog-empty">Bu Ürün için katalog görseli şu anda görüntülenemiyor. Tüm kataloglara bakabilir veya WhatsApp üzerinden destek alabilirsiniz.</div>`;
         }
         return `<div class="catalog-list">${list.map(function(catalog, index){
             const id = catalogId(catalog, index);
@@ -4448,7 +7454,7 @@ function trackingStatusIndex(status){
     if(s.includes("teslim")) return 4;
     if(s.includes("kargo")) return 3;
     if(s.includes("hazır") || s.includes("hazir")) return 2;
-    if(s.includes("üret") || s.includes("uret")) return 1;
+    if(s.includes("uret")) return 1;
     if(s.includes("iptal")) return -1;
     return 0;
 }
@@ -4473,13 +7479,13 @@ function renderCustomerOrderDetails(details){
     }
 
     return details.map(function(item, index){
-        const measure = `${item.en || "-"} × ${item.boy || "-"} cm`;
+        const measure = `${item.en || "-"} x ${item.boy || "-"} cm`;
         const fabric = item.kumas ? `<br>Kumaş: ${escapeHTML(item.kumas)}` : "";
         const kasa = item.kasa_rengi ? `<br>Kasa: ${escapeHTML(item.kasa_rengi)}` : "";
         return `
             <div class="tracking-detail-item">
-                <strong>${index + 1}. Ölçü · ${escapeHTML(item.urun || "Ürün")}</strong>
-                <span>${escapeHTML(measure)} · ${escapeHTML(item.adet || "1")} adet<br>Sistem: ${escapeHTML(item.montaj_tipi || "-")}${kasa}${fabric}</span>
+                <strong>${index + 1}. Ölçü - ${escapeHTML(item.urun || "Ürün")}</strong>
+                <span>${escapeHTML(measure)} - ${escapeHTML(item.adet || "1")} adet<br>Sistem: ${escapeHTML(item.montaj_tipi || "-")}${kasa}${fabric}</span>
             </div>
         `;
     }).join("");
@@ -4560,7 +7566,7 @@ async function queryOrderStatus(){
     result.innerHTML = `<div class="tracking-status-card">Sipariş bilgileri sorgulanıyor...</div>`;
 
     try{
-        const response = await fetch(PRICE_API_URL + "?action=getPublicOrderStatus&orderCode=" + encodeURIComponent(code) + "&t=" + Date.now(), {
+        const response = await fetch(PRICE_API_URL + "action=getPublicOrderStatus&orderCode=" + encodeURIComponent(code) + "&t=" + Date.now(), {
             method:"GET",
             cache:"no-store"
         });
@@ -4603,19 +7609,7 @@ async function queryOrderStatus(){
 }
 
 
-/* SİPARİŞ TAKİP İNCE AYAR - WHATSAPP DESTEK */
-function openLostOrderCodeWhatsApp(){
-    const name = document.getElementById("name") ? document.getElementById("name").value.trim() : "";
-    const phone = document.getElementById("phone") ? document.getElementById("phone").value.trim() : "";
-    const message = [
-        "Merhaba Prestij Life, sipariş takip numaramı kaybettim.",
-        name ? "Ad Soyad: " + name : "",
-        phone ? "Telefon: " + phone : "",
-        "Siparişimi bulabilir misiniz?"
-    ].filter(Boolean).join("\\n");
-    window.open("https://wa.me/905053559532?text=" + encodeURIComponent(message), "_blank");
-}
-
+/* SİPARİŞ TAKİP ?NCE AYAR - WHATSAPP DESTEK */
 function openOrderWhatsAppSupport(){
     const code = lastSubmittedOrderCode || (document.getElementById("successOrderCode") ? document.getElementById("successOrderCode").textContent.trim() : "");
     const message = [
@@ -4627,15 +7621,15 @@ function openOrderWhatsAppSupport(){
 }
 
 
-/* SİPARİŞ DURUM AKIŞI SON HAL */
+/* SİPARİŞ DURUM AKI?I SON HAL */
 function trackingStatusIndex(status){
     const s = String(status || "").toLowerCase();
     if(s.includes("iptal")) return -1;
     if(s.includes("teslim")) return 5;
     if(s.includes("kargo")) return 4;
     if(s.includes("hazır") || s.includes("hazir")) return 3;
-    if(s.includes("üret") || s.includes("uret")) return 2;
-    if(s.includes("ölçü") || s.includes("olcu") || s.includes("onay")) return 1;
+    if(s.includes("uret")) return 2;
+    if(s.includes("Ölçü") || s.includes("olcu") || s.includes("onay")) return 1;
     return 0;
 }
 
@@ -4655,9 +7649,9 @@ function trackingTimelineHTML(status){
 
 function customerStatusDescription(status){
     const s = String(status || "Yeni");
-    if(s === "Yeni") return "Siparişiniz alınmıştır. Ekibimiz ölçü ve ürün bilgilerini kontrol edecektir.";
-    if(s === "Ölçü Onaylandı") return "Ölçü ve ürün bilgileriniz onaylandı. Siparişiniz üretim sırasına alınacaktır.";
-    if(s === "Üretimde") return "Siparişiniz üretim aşamasındadır.";
+    if(s === "Yeni") return "Siparişiniz alınmıştır. Ekibimiz Ölçü ve Ürün bilgilerini kontrol edecektir.";
+    if(s === "Ölçü Onaylandı") return "Ölçü ve Ürün bilgileriniz onaylandı. Siparişiniz Üretim sırasına alınacaktır.";
+    if(s === "Üretimde") return "Siparişiniz Üretim aşamasındadır.";
     if(s === "Hazır") return "Siparişiniz hazırlandı. Teslimat/kargo aşamasına geçilecektir.";
     if(s === "Kargoya Verildi") return "Siparişiniz kargoya verilmiştir.";
     if(s === "Teslim Edildi") return "Siparişiniz teslim edilmiştir. Güzel günlerde kullanın.";
@@ -4682,7 +7676,7 @@ async function queryOrderStatus(){
     result.innerHTML = `<div class="tracking-status-card">Sipariş bilgileri sorgulanıyor...</div>`;
 
     try{
-        const response = await fetch(PRICE_API_URL + "?action=getPublicOrderStatus&orderCode=" + encodeURIComponent(code) + "&t=" + Date.now(), {
+        const response = await fetch(PRICE_API_URL + "action=getPublicOrderStatus&orderCode=" + encodeURIComponent(code) + "&t=" + Date.now(), {
             method:"GET",
             cache:"no-store"
         });
@@ -4719,7 +7713,6 @@ async function queryOrderStatus(){
                 <div class="tracking-details">${renderCustomerOrderDetails(details)}</div>
 
                 <div class="tracking-found-actions">
-                    <button type="button" class="btn-light" onclick="copyTrackingFromInput()">Takip No Kopyala</button>
                     <button type="button" class="btn-main" onclick="openTrackingWhatsAppSupport()">WhatsApp Destek</button>
                 </div>
             </div>
@@ -4833,6 +7826,293 @@ function closeCustomerPriceList(){
 function priceListOutsideClose(event){
     if(event.target && event.target.id === "customerPriceListModal"){
         closeCustomerPriceList();
+    }
+}
+
+/* SUPABASE GEÇİŞ KATMANI - MÜŞTERİ S?TES? */
+async function loadCurrentPrices(){
+    setPriceStatus("loading", "");
+
+    try{
+        const prices = await loadPricesFromSupabase();
+        currentPrices = prices;
+        priceReady = true;
+        priceLoadedFromApi = true;
+        priceLoadFailed = false;
+        setPriceStatus("ok", "G\u00fcncel fiyatlar y\u00fcklendi.");
+    }catch(error){
+        if(!USE_APPS_SCRIPT_FALLBACK){
+            currentPrices = null;
+            priceReady = false;
+            priceLoadedFromApi = false;
+            priceLoadFailed = true;
+            setPriceStatus("fail", "Güncel fiyat bilgisi alınamadı. Lütfen sayfayı yenileyin veya WhatsApp üzerinden bizimle iletişime geçin.");
+            return;
+        }
+
+        try{
+            const response = await fetch(PRICE_API_URL + "t=" + Date.now(), {
+                method:"GET",
+                cache:"no-store"
+            });
+            const data = await response.json();
+
+            if(!data.success){
+                throw new Error(data.message || "Fiyatlar alınamadı.");
+            }
+
+            currentPrices = validatePrices(data.prices);
+            priceReady = true;
+            priceLoadedFromApi = true;
+            priceLoadFailed = false;
+        setPriceStatus("ok", "G\u00fcncel fiyatlar y\u00fcklendi.");
+        }catch(fallbackError){
+            currentPrices = null;
+            priceReady = false;
+            priceLoadedFromApi = false;
+            priceLoadFailed = true;
+            setPriceStatus("fail", "Güncel fiyat bilgisi alınamadı. Lütfen sayfayı yenileyin veya WhatsApp üzerinden bizimle iletişime geçin.");
+        }
+    }
+}
+
+async function loadCatalogData(){
+    catalogDataLoaded = false;
+    activeCatalogs = [];
+
+    try{
+        const data = await loadCatalogDataFromSupabase();
+        productsList = Array.isArray(data.products)
+            ? data.products.filter(function(product){ return String(product.durum || "aktif").toLowerCase() !== "pasif"; })
+            : [];
+        updateProductTypesFromAdmin(productsList);
+        activeCatalogs = Array.isArray(data.catalogs)
+            ? data.catalogs.filter(function(catalog){ return String(catalog.durum || "aktif").toLowerCase() !== "pasif"; })
+            : [];
+        catalogDataLoaded = true;
+    }catch(error){
+        if(USE_APPS_SCRIPT_FALLBACK){
+            try{
+                const response = await fetch(PRICE_API_URL + "action=listCatalogData&t=" + Date.now(), {
+                    method:"GET",
+                    cache:"no-store"
+                });
+                const data = await response.json();
+
+                if(!data.success){
+                    throw new Error(data.message || "Katalog bilgileri alınamadı.");
+                }
+
+                productsList = Array.isArray(data.products)
+                    ? data.products.filter(function(product){ return String(product.durum || "aktif").toLowerCase() !== "pasif"; })
+                    : [];
+                updateProductTypesFromAdmin(productsList);
+                activeCatalogs = Array.isArray(data.catalogs)
+                    ? data.catalogs.filter(function(catalog){ return String(catalog.durum || "aktif").toLowerCase() !== "pasif"; })
+                    : [];
+                catalogDataLoaded = true;
+                return;
+            }catch(fallbackError){}
+        }
+
+        catalogDataLoaded = false;
+        activeCatalogs = [];
+        productTypes = DEFAULT_PRODUCT_TYPES.slice();
+        console.warn("Katalog ve Ürün bilgileri alınamadı:", error);
+    }
+}
+
+function buildSiteOrderPayload(items, ad, tel, adr, email){
+    const payloadItems = items.map(function(item){
+        return {
+            productKey: item.productKey,
+            productLabel: item.productLabel,
+            urun: item.productLabel,
+            uygulama_yeri: item.uygulamaText,
+            montaj_tipi: item.tipText,
+            kasa_tipi: item.kasaTipi || "Kasa",
+            kasa_rengi: (item.kasaTipi || "Kasa") + " / " + item.kasa,
+            kasa_rengi_raw: item.kasa,
+            kumas: item.productKey === "klasik" ? item.kumas : "",
+            blackout_kumas: item.productKey === "blackout" ? item.blackout : "",
+            tul_kumas: item.productKey === "ciftli" ? item.tul : (item.productKey === "tul_perde" ? item.tul_perde : ""),
+            perde_kumas: item.productKey === "ciftli" ? item.perde : "",
+            gercek_en: item.en,
+            gercek_boy: item.boy,
+            hesap_en: item.hesapEn,
+            hesap_boy: item.hesapBoy,
+            adet: item.adet,
+            acilir_adet: item.acilir,
+            satis_m2: item.satisM2,
+            birim_fiyat: item.unitPrice,
+            satir_tutar: item.tutar,
+            lineTotal: item.tutar
+        };
+    });
+
+    const totalAmount = payloadItems.reduce(function(sum,item){
+        return sum + Number(item.satir_tutar || 0);
+    }, Number(currentPrices && currentPrices.kargo ? currentPrices.kargo : 0));
+
+    return {
+        action: "createOrder",
+        customer:{
+            name: ad,
+            phone: tel,
+            address: adr,
+            email: normalizeOptionalEmail(email)
+        },
+        totalAmount: totalAmount,
+        items: payloadItems
+    };
+}
+
+async function submitSiteOrder(){
+    const button = document.getElementById("orderSubmitBtn");
+
+    if(!lastCalculatedOrderData){
+        alert("Önce siparişi hesaplayın.");
+        return;
+    }
+
+    const ad = document.getElementById("name").value.trim();
+    const phoneRaw = document.getElementById("phone").value.trim();
+    const email = normalizeOptionalEmail((document.getElementById("email") || {}).value || "");
+    const adr = document.getElementById("address").value.trim();
+    const phoneData = normalizePhone(phoneRaw);
+
+    if(!ad || !phoneRaw || !adr){
+        alert("Sipariş vermek için ad soyad, telefon ve adres bilgilerini doldurun.");
+        return;
+    }
+
+    if(!phoneData.valid){
+        alert("Telefon numarası geçerli olmalıdır. Örnek: 05053559532");
+        return;
+    }
+
+    if((document.getElementById("email") || {}).value && !email){
+        alert("E-posta adresi geçerli değil. E-posta zorunlu değildir; boş bırakabilir veya doğru formatta yazabilirsiniz.");
+        return;
+    }
+
+    lastCalculatedOrderData.customer = {
+        name: ad,
+        phone: phoneData.value,
+        address: adr,
+        email: email
+    };
+
+    if(orderPayloadHasMissingColor(lastCalculatedOrderData)){
+        const confirmMissingColor = confirm("Renk seçimi eksik görünüyor. Yine de sipariş vermek istiyor musunuz");
+        if(!confirmMissingColor) return;
+    }
+
+    if(orderSubmitInProgress) return;
+    orderSubmitInProgress = true;
+
+    button.disabled = true;
+    button.textContent = "Kaydediliyor...";
+
+    const status = document.getElementById("orderSaveStatus");
+    if(status) status.textContent = "";
+
+    try{
+        let data = await createOrderInSupabase(lastCalculatedOrderData);
+
+        if(!data.success){
+            throw new Error(data.message || "Sipariş kaydedilemedi.");
+        }
+
+        const orderCode = getOrderCodeFromResponse(data);
+
+        if(status){
+            status.textContent = "Siparişiniz alınmıştır. Sipariş onayı için sizi en kısa sürede arayacağız.";
+        }
+
+        button.textContent = "Sipariş Alındı";
+
+        if(orderCode){
+            sendOrderEmailNotification(orderCode, lastCalculatedOrderData);
+            showOrderSuccessModal(orderCode, data);
+        }else{
+            alert("Siparişiniz alındı. Sipariş takip numarası alınamadıysa WhatsApp üzerinden bizimle iletişime geçin.");
+        }
+    }catch(error){
+        if(status) status.textContent = "Sipariş kaydedilemedi. Lütfen tekrar deneyin veya WhatsApp üzerinden bize yazın.";
+        button.disabled = false;
+        button.textContent = "Sipariş Ver";
+    }finally{
+        orderSubmitInProgress = false;
+    }
+}
+
+async function queryOrderStatus(){
+    const input = document.getElementById("orderStatusCode");
+    const result = document.getElementById("orderStatusResult");
+    const code = input ? input.value.trim().toUpperCase() : "";
+
+    if(!result) return;
+
+    if(!code){
+        result.className = "tracking-result show";
+        result.innerHTML = `<div class="warning-box"><b>Sipariş kodu gerekli.</b>Sipariş durumunu görmek için size verilen takip numarasını yazın.</div>`;
+        return;
+    }
+
+    result.className = "tracking-result show";
+    result.innerHTML = `<div class="tracking-status-card">Sipariş bilgileri sorgulanıyor...</div>`;
+
+    try{
+        let data;
+        try{
+            data = await getPublicOrderStatusFromSupabase(code);
+        }catch(error){
+            if(!USE_APPS_SCRIPT_FALLBACK) throw error;
+            const response = await fetch(PRICE_API_URL + "action=getPublicOrderStatus&orderCode=" + encodeURIComponent(code) + "&t=" + Date.now(), {
+                method:"GET",
+                cache:"no-store"
+            });
+            data = await response.json();
+        }
+
+        if(!data.success){
+            throw new Error(data.message || "Sipariş bulunamadı.");
+        }
+
+        const order = data.order || {};
+        const details = data.details || [];
+        const statusText = order.durum_metin || order.durum || "Siparişiniz alındı";
+
+        result.innerHTML = `
+            <div class="tracking-status-card">
+                <div class="tracking-status-top">
+                    <div>
+                        <h3>${escapeHTML(statusText)}</h3>
+                        <p class="tracking-status-note">${escapeHTML(customerStatusDescription(order.durum || statusText))}</p>
+                    </div>
+                    <span class="tracking-code-pill">${escapeHTML(order.siparis_kodu || code)}</span>
+                </div>
+
+                ${trackingTimelineHTML(order.durum || statusText)}
+
+                <div class="modal-summary">
+                    <div class="modal-summary-row"><span>Sipariş Tarihi</span><strong>${escapeHTML(formatOrderDateForCustomer(order.tarih))}</strong></div>
+                    <div class="modal-summary-row"><span>Müşteri</span><strong>${escapeHTML(order.musteri_ad || "-")}</strong></div>
+                    <div class="modal-summary-row"><span>Toplam Adet</span><strong>${escapeHTML(order.toplam_adet || "-")}</strong></div>
+                    ${order.toplam_tutar ? `<div class="modal-summary-row"><span>Toplam Tutar</span><strong>${formatTL(order.toplam_tutar)}</strong></div>` : ""}
+                </div>
+
+                <div class="summary-section-title">Sipariş Detayları</div>
+                <div class="tracking-details">${renderCustomerOrderDetails(details)}</div>
+
+                <div class="tracking-found-actions">
+                    <button type="button" class="btn-main" onclick="openTrackingWhatsAppSupport()">WhatsApp Destek</button>
+                </div>
+            </div>
+        `;
+    }catch(error){
+        result.innerHTML = `<div class="warning-box"><b>Sipariş bulunamadı.</b>${escapeHTML(error.message || "Lütfen takip numaranızı kontrol edin.")}</div>`;
     }
 }
 
